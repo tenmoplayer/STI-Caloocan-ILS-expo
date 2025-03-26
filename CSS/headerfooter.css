@@ -3,10 +3,10 @@
     font-weight: 400;
     font-style: normal;
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 body {
     margin: 0;
-    overflow-x: hidden;
     background-color: #f5f5df;
 }
 body.active {
@@ -14,7 +14,6 @@ body.active {
     width: 100%;
 }
 header {
-    background-color: #f5f5df;
     height: 15svh;
     
 }
@@ -42,12 +41,18 @@ header {
     margin-right: 20px;
     padding-inline: 2%;
     margin-top: 80px;
-    background-color: red;
+    
+}
+.navBar li p {
+    font-weight: 700;
 }
 .navBar :nth-child(3) {
     margin: 0;
     margin-top: 80px;
     margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    width: 20%;
 }
 .navBar :nth-child(5) {
     margin: 0;
@@ -58,7 +63,7 @@ header {
 }
 .logo {
     height: 150px;
-
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
 }
 
 .headerPage {
@@ -79,5 +84,27 @@ header {
 .about {
     margin-top: 100px;
     height: 800px;
-    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.aboutContents {
+    width: 100%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+}
+.about h2 {
+    font-size: 30px;
+    padding-inline-start: 60px;
+}
+.aboutContentscol1 :first-child {
+    margin-top: 20px;
+}
+.aboutContentscol1 li {
+    text-decoration: none;
+    list-style: none;
+    padding-inline-start: 20px;
+    padding-block: 20px;
+    border-bottom: 1px solid #695450;
 }
