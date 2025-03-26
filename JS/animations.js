@@ -11,6 +11,21 @@ buttons.forEach(button => {
     button.addEventListener("click", (event) => {
         const buttonText = event.currentTarget.textContent.trim().toUpperCase(); // Normalize text
 
+        // Change image based on button clicked
+        switch (buttonText) {
+            case "ABOUT":
+                logo.src = "../IMAGES/aboutfixed.png";
+                break;
+            case "CONTACTS":
+                logo.src = "../IMAGES/contact.png";
+                break;
+            case "MENU":
+                logo.src = "../IMAGES/menu.png";
+                break;
+            case "ORDER NOW":
+                logo.src = "../IMAGES/order.png";
+                break;
+        }
 
         if (activeButton === event.currentTarget) {
             // If the same button is clicked again, close the header
