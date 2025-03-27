@@ -121,3 +121,25 @@ window.addEventListener('click', (e) => {
         }
     });
 });
+
+buttons.forEach(button => {
+    button.addEventListener("click", (event) => {
+        const buttonText = event.currentTarget.textContent.trim().toUpperCase(); // Normalize text
+
+        // Change image based on button clicked
+        switch (buttonText) {
+            case "ABOUT":
+                logo.src = "../IMAGES/logo.png";
+                break;
+            case "CONTACTS":
+                logo.src = "../IMAGES/logo.png";
+                break;
+            case "MENU":
+                logo.src = "../IMAGES/logo.png";
+                break;
+            case "ORDER NOW":
+                logo.src = "../IMAGES/logo.png";
+                break;
+        }
+    });
+});
