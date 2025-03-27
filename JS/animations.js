@@ -129,7 +129,7 @@ buttons.forEach(button => {
         // Change image based on button clicked
         switch (buttonText) {
             case "ABOUT":
-                logo.src = "../IMAGES/logo.png";
+                logo.src = '../IMAGES/logo.png';
                 break;
             case "CONTACTS":
                 logo.src = "../IMAGES/logo.png";
