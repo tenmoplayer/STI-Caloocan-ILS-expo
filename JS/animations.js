@@ -14,16 +14,16 @@ buttons.forEach(button => {
         // Change image based on button clicked
         switch (buttonText) {
             case "ABOUT":
-                logo.src = "../IMAGES/aboutfixed.png";
+                logo.src = "/IMAGES/logo.png";
                 break;
             case "CONTACTS":
-                logo.src = "../IMAGES/contact.png";
+                logo.src = "/IMAGES/logo.png";
                 break;
             case "MENU":
-                logo.src = "../IMAGES/menu.png";
+                logo.src = "/IMAGES/logo.png";
                 break;
             case "ORDER NOW":
-                logo.src = "../IMAGES/order.png";
+                logo.src = "/IMAGES/logo.png";
                 break;
         }
 
@@ -47,3 +47,39 @@ buttons.forEach(button => {
         }
     });
 });
+
+const dropdowns = document.querySelectorAll('.dropdown');
+
+        // Loop through each dropdown and add a click event listener to the <p> tag
+        dropdowns.forEach(dropdown => {
+            const toggleText = dropdown.querySelector('p');
+            const dropdownContent = dropdown.querySelector('.dropdowncontent');
+            const parentContainer = document.querySelector('.menuContentscol1');
+            
+            toggleText.addEventListener('click', () => {
+                // Toggle the visibility of the dropdown content
+                const isContentVisible = dropdownContent.style.display === 'block';
+                dropdownContent.style.display = isContentVisible ? 'none' : 'block';
+
+                // Adjust the parent container's height when the dropdown content is displayed
+                if (!isContentVisible) {
+                    parentContainer.style.height = parentContainer.scrollHeight + 'px';
+                } else {
+                    parentContainer.style.height = 'auto'; // Reset to auto when hidden
+                }
+            });
+        });
+
+        // Optional: Close the dropdown if clicking anywhere outside
+        window.addEventListener('click', (e) => {
+            dropdowns.forEach(dropdown => {
+                const dropdownContent = dropdown.querySelector('.dropdowncontent');
+                const toggleText = dropdown.querySelector('p');
+                const parentContainer = document.querySelector('.menuContentscol1');
+
+                if (!dropdown.contains(e.target)) {
+                    dropdownContent.style.display = 'none';
+                    parentContainer.style.height = 'auto'; // Reset height when closed
+                }
+            });
+        });

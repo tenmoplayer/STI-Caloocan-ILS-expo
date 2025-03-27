@@ -24,7 +24,7 @@ header {
     height: 10%;
     background-image: url("CSSBG/header_element.png");
     background-repeat: repeat-x;
-    background-size: 800px;
+    background-size: contain;
 }
 .navBar {
     display: flex;
@@ -40,15 +40,14 @@ header {
 .navBar li {
     margin-right: 20px;
     padding-inline: 2%;
-    margin-top: 80px;
-    
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
 }
 .navBar li p {
     font-weight: 700;
 }
 .navBar :nth-child(3) {
-    margin: 0;
-    margin-top: 80px;
     margin-right: 20px;
     display: flex;
     justify-content: center;
@@ -56,12 +55,13 @@ header {
 }
 .navBar :nth-child(5) {
     margin: 0;
-    margin-top: 80px;
 }
-.navBar li:hover {
+.navBar p:hover {
     background-color: blue;
 }
 .logo {
+    position: absolute;
+    top: 15px;
     height: 150px;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
 }
@@ -76,6 +76,7 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: top 0.5s ease-in-out;
     z-index: 1;
+    overflow: scroll;
 }
 .headerPage.active {
     z-index: 1;
@@ -84,7 +85,7 @@ header {
 .about {
     margin-top: 100px;
     height: 800px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-end;
 }
@@ -107,4 +108,84 @@ header {
     padding-inline-start: 20px;
     padding-block: 20px;
     border-bottom: 1px solid #695450;
+}
+
+.menu {
+    overflow: scroll;
+    margin-top: 100px;
+    height: 800px;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.menuContents {
+    position: fixed;
+    width: 100%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    column-gap: 30px;
+}
+.menu h2 {
+    font-size: 30px;
+    font-weight: 700;
+    padding-inline-start: 60px;
+}
+.menuContents ul {
+    height: 400px;
+    overflow: scroll;
+}
+.menuContentscol1 {
+    width: 100%;
+    padding: 20px;
+    transition: height 0.3s ease; /* Smooth transition for height */
+}
+.menuContentscol1 li {
+    text-decoration: none;
+    list-style: none;
+    padding-inline-start: 20px;
+    padding-block: 20px;
+    border-bottom: 1px solid #695450;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdowncontent {
+    display: none;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-size: 0.8rem;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.dropdown p {
+    cursor: pointer;
+    font-weight: 700;
+    margin: 0;
+}
+
+.menuContentscol2 {
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.hopiaItemContainer {
+    margin-block-start: 50px;
+    background-color: green;
+    margin-inline-start: 40px;
+    height: 55%;
+    width: 35%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.hopiaDescription p {
+    text-align: justify;
+    text-align: center;
+    font-size: 15px;
 }
