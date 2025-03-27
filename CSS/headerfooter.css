@@ -4,6 +4,7 @@
     font-style: normal;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    box-sizing: border-box;
 }
 body {
     margin: 0;
@@ -14,53 +15,67 @@ body.active {
     width: 100%;
 }
 header {
-    height: 15svh;
-    
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes elements to top and bottom */
+    align-items: center;
+    height: 15svh; /* Adjust based on your design */
+    padding: 10px;
+}
+.elementparent {
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
 .header_element {
     position: absolute;
-    margin-top: -20px;
     width: 100%;
-    height: 10%;
+    height: 100%;
     background-image: url("CSSBG/header_element.png");
-    background-repeat: repeat-x;
     background-size: contain;
+    bottom: 50px;
+}
+.headerElementimgcontainer {
+    
 }
 .navBar {
+    position: absolute;
     display: flex;
-    list-style: none;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Aligns items vertically */
     padding: 0;
     margin: 0;
-    justify-content: center;
-    height: 100%;
-    font-size: 16px;
-    position: relative;
+    list-style: none;
+    width: 100%;
     z-index: 99;
 }
-.navBar li {
-    margin-right: 20px;
-    padding-inline: 2%;
+.navButtons {
+    flex: 1; /* Equal width for all items */
     display: flex;
-    justify-content: end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap; /* Prevents text from wrapping */
+    min-width: 0; /* Ensures flex items shrink properly */
+}
+  
+.navBar ul :nth-child(3) {
+    justify-content: center;
+    align-items: center;
+}
+.navBar li {
+    margin: auto;
+    cursor: pointer;
+    display: flex;
 }
 .navBar li p {
     font-weight: 700;
-}
-.navBar :nth-child(3) {
-    margin-right: 20px;
-    display: flex;
-    justify-content: center;
-    width: 20%;
-}
-.navBar :nth-child(5) {
-    margin: 0;
 }
 .navBar p:hover {
     background-color: blue;
 }
 .logo {
-    position: absolute;
     top: 15px;
     height: 150px;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
@@ -73,9 +88,8 @@ header {
     width: 100%;
     height: 100vh;
     background-color: #fff5d6;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: top 0.5s ease-in-out;
-    z-index: 1;
+    z-index: 0;
     overflow: scroll;
 }
 .headerPage.active {
@@ -83,25 +97,39 @@ header {
     top: 0;
 }
 .about {
+    overflow: scroll;
     margin-top: 100px;
     height: 800px;
-    display: none;
     flex-direction: column;
     justify-content: flex-end;
 }
+
 .aboutContents {
+    position: fixed;
     width: 100%;
     height: 85%;
     display: grid;
     grid-template-columns: 30% 1fr;
+    column-gap: 30px;
 }
+
 .about h2 {
     font-size: 30px;
+    font-weight: 700;
     padding-inline-start: 60px;
 }
-.aboutContentscol1 :first-child {
-    margin-top: 20px;
+
+.about ul {
+    height: 400px;
+    overflow: scroll;
 }
+
+.aboutContentscol1 {
+    width: 100%;
+    padding: 20px;
+    transition: height 0.3s ease;
+}
+
 .aboutContentscol1 li {
     text-decoration: none;
     list-style: none;
@@ -109,6 +137,27 @@ header {
     padding-block: 20px;
     border-bottom: 1px solid #695450;
 }
+
+.aboutContentscol2 {
+    background-color: red; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.hopiaItemContainer {
+    margin-block-start: 50px;
+    background-color: green;
+    background-image: url("CSSBG/bg1compressedhopia.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-inline-start: 40px;
+    height: 55%;
+    width: 35%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
 
 .menu {
     overflow: scroll;
@@ -183,9 +232,50 @@ header {
     width: 35%;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    border-radius: 15px;
+
+}
+.hopiaImgContainer {
+    background-color: blue;
+}
+.hopiaDescription {
+    position: relative;
 }
 .hopiaDescription p {
     text-align: justify;
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
+    padding-inline: 10px;
+}
+.hopiaDescription img {
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+}
+
+.about, .menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0.5s;
+}
+
+.about.active, .menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear;
+}
+.menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0.5s;
+}
+
+.menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear;
 }
