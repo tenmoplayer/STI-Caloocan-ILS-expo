@@ -84,7 +84,13 @@ h1 {
 }
 
 .subSection {
-    height: 300px;
+    height: auto;
+    max-height: 500px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .subSection p {
     padding-inline: 10%;
@@ -92,17 +98,18 @@ h1 {
 .subSection h2 {
     font-size: 40px;
 }
-.subSection h2, p {
+.subSection h2 {
+    text-align: center;
+}
+.subSection p {
     text-align: center;
 }
 .subSection .orderButtons {
-    position: absolute;
+    width: auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
     column-gap: 20px;
-    left: 50%;
-    transform: translate(-50%);
 }
 .subSection .orderButtons img {
     height: 30px;

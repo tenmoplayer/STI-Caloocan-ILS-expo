@@ -8,6 +8,7 @@
 }
 body {
     margin: 0;
+    padding: 0;
     background-color: #f5f5df;
 }
 body.active {
@@ -86,7 +87,7 @@ header {
     top: -100%;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #fff5d6;
     transition: top 0.5s ease-in-out;
     z-index: 0;
@@ -95,55 +96,151 @@ header {
 .headerPage.active {
     z-index: 1;
     top: 0;
+    
 }
 .about {
-    overflow: scroll;
-    margin-top: 100px;
-    height: 800px;
-    flex-direction: column;
+    overflow: hidden;
+    display: flex;
     justify-content: flex-end;
+    flex-direction: column;
 }
 
 .aboutContents {
-    position: fixed;
     width: 100%;
-    height: 85%;
+    height: 80vh;
     display: grid;
     grid-template-columns: 30% 1fr;
     column-gap: 30px;
+    flex: 1;
+    margin-top: 150px;
 }
 
 .about h2 {
     font-size: 30px;
     font-weight: 700;
+    
+    padding: 0;
+    margin: 0;
     padding-inline-start: 60px;
 }
 
 .about ul {
-    height: 400px;
+    height: 700px;
     overflow: scroll;
 }
 
 .aboutContentscol1 {
     width: 100%;
-    padding: 20px;
+    padding: 0 0 0 0px;
     transition: height 0.3s ease;
 }
-
+.dropdownmvcorecontent {
+    display: none;
+}
+.dropdownmvcore p {
+    text-align: left;
+    font-weight: 700;
+}
+.dropdownmvcorecontent p {
+    font-weight: 400;
+}
 .aboutContentscol1 li {
     text-decoration: none;
     list-style: none;
     padding-inline-start: 20px;
-    padding-block: 20px;
+    padding-block: 40px;
     border-bottom: 1px solid #695450;
 }
 
 .aboutContentscol2 {
-    background-color: red; 
     width: 100%;
-    height: 100%;
-    display: flex;
 }
+
+
+
+
+.missionvisionTab {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    padding: 20px;
+    height: 80%;
+}
+.missionvisionTab div {
+    background-color: #aa8356;
+    flex: 1;
+    border-radius: 20px;
+}
+.missionvisionTab p {
+    text-align: center ;
+    font-size: 23px;
+}
+.missionvisionTab h2 {
+    padding: 0;
+    padding-block: 30px;
+    text-align: center;
+}
+.missionvisionTab img {
+    width: 50px;
+}
+
+
+
+
+.scrollCore {
+    height: 100%;
+    padding-right: 60px;
+    overflow: scroll;
+}
+.corevaluesTab {
+    display: grid;
+    padding: 20px;
+    height: 180%;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 10px;
+    overflow: scroll;
+}
+.corevaluesContainer {
+    position: relative;
+}
+.corevaluesContainer img {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.corevaluesContainer h2 {
+    padding: 0;
+    text-align: center;
+    padding-top: 15px;
+    z-index: 2;
+}
+.corevaluesContainer p {
+    padding: 20px;
+    font-size: 25px;
+    margin-top: 0;
+    z-index: 2;
+}
+.missionvisionTab, .scrollCore {
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .hopiaItemContainer {
     margin-block-start: 50px;
