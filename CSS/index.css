@@ -251,3 +251,14 @@ h1 {
     filter: blur(10px);
     z-index: -1; 
 } */
+
+section {
+    scale: .8; opacity: 0.7;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+@keyframes fade-in {
+
+    to {scale: 1; opacity: 1;}
+}

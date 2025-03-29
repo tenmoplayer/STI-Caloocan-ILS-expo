@@ -2,8 +2,12 @@ const buttons = document.querySelectorAll(".navButtons");
 const slate = document.getElementById("headerPage");
 const body = document.querySelector("body");
 const logo = document.getElementById("logo");
-const aboutContainer = document.getElementById("aboutContainer");
-const menuContainer = document.getElementById("menuContainer");
+const sections = {
+    "ABOUT": document.getElementById("aboutContainer"),
+    "MENU": document.getElementById("menuContainer"),
+    "CONTACTS": document.getElementById("contactsContainer"),
+    "ORDER NOW": document.getElementById("orderContainer")
+};
 
 let activeButton = null;
 const originalImage = "/IMAGES/logo.png";
@@ -12,12 +16,11 @@ let isTransitioning = false;
 
 // Function to show element with fade-in effect
 function showWithFade(element) {
-    element.style.display = "block"; // Ensure it's visible in layout
-    element.style.opacity = "0"; // Start fully transparent
+    element.style.display = "flex";
+    element.style.opacity = "0";
     element.style.visibility = "visible";
-
     setTimeout(() => {
-        element.style.opacity = "1"; // Gradually fade in
+        element.style.opacity = "1";
     }, 50);
 }
 
@@ -25,14 +28,13 @@ function showWithFade(element) {
 function hideWithFade(element) {
     element.style.opacity = "0";
     element.style.visibility = "hidden";
-
     setTimeout(() => {
-        element.style.display = "none"; // Fully hide after transition
+        element.style.display = "none";
     }, transitionDuration);
 }
 
 // Apply default styles for fade effect
-[aboutContainer, menuContainer].forEach(element => {
+Object.values(sections).forEach(element => {
     element.style.opacity = "0";
     element.style.visibility = "hidden";
     element.style.display = "none";
@@ -47,28 +49,22 @@ buttons.forEach(button => {
         logo.src = originalImage;
 
         if (activeButton === event.currentTarget) {
-            // If clicking the same button again, close everything
+            // Close all sections if the same button is clicked again
             slate.classList.remove("active");
             body.classList.remove("active");
-            hideWithFade(aboutContainer);
-            hideWithFade(menuContainer);
+            Object.values(sections).forEach(hideWithFade);
             activeButton = null;
         } else {
-            // Allow transition even if another section is open
+            // Open selected section and close others
             slate.classList.add("active");
             body.classList.add("active");
-
-            if (buttonText === "ABOUT") {
-                hideWithFade(menuContainer); // Fade out menu
-                showWithFade(aboutContainer); // Fade in about
-            } else if (buttonText === "MENU") {
-                hideWithFade(aboutContainer); // Fade out about
-                showWithFade(menuContainer); // Fade in menu
-            } else {
-                hideWithFade(aboutContainer);
-                hideWithFade(menuContainer);
-            }
-
+            Object.entries(sections).forEach(([key, element]) => {
+                if (key === buttonText) {
+                    showWithFade(element);
+                } else {
+                    hideWithFade(element);
+                }
+            });
             activeButton = event.currentTarget;
         }
 
@@ -79,6 +75,30 @@ buttons.forEach(button => {
         }, transitionDuration);
     });
 });
+
+// Change logo based on button clicked
+buttons.forEach(button => {
+    button.addEventListener("click", (event) => {
+        const buttonText = event.currentTarget.textContent.trim().toUpperCase();
+        if (sections[buttonText]) {
+            logo.src = "../IMAGES/logo.png";
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -122,27 +142,6 @@ window.addEventListener('click', (e) => {
     });
 });
 
-buttons.forEach(button => {
-    button.addEventListener("click", (event) => {
-        const buttonText = event.currentTarget.textContent.trim().toUpperCase(); // Normalize text
-
-        // Change image based on button clicked
-        switch (buttonText) {
-            case "ABOUT":
-                logo.src = '../IMAGES/logo.png';
-                break;
-            case "CONTACTS":
-                logo.src = "../IMAGES/logo.png";
-                break;
-            case "MENU":
-                logo.src = "../IMAGES/logo.png";
-                break;
-            case "ORDER NOW":
-                logo.src = "../IMAGES/logo.png";
-                break;
-        }
-    });
-});
 
 
 
@@ -152,7 +151,7 @@ buttons.forEach(button => {
 document.addEventListener("DOMContentLoaded", function () {
     const missionVisionTab = document.querySelector(".missionvisionTab");
     const scrollCore = document.querySelector(".scrollCore");
-    const listItems = document.querySelectorAll(".aboutContentscol1 ul li");
+    const listItems = document.querySelectorAll(".onclick");
 
     // Hide core values initially
     scrollCore.style.display = "none";
