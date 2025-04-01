@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/headerfooter.css">
+    <link rel="stylesheet" href="CSS/mediaresponsiveness.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
@@ -36,80 +37,11 @@
                     </ul>
                 </div>
                 <div class="aboutContentscol2">
-                    <div class="missionvisionTab">
-                        <div class="mission">
-                            <h2>MISSION</h2>
-                            <p>Our company is committed to serve tasty and nourishing snack that will satisfy
-                                our customers. Fruitopia, transforms the traditional Hopia by adding the natural
-                                goodness of fruit purees, making it a lovely dessert as well as a filling snack which gives
-                                a fresh twist to this delicacy. This distinctive feature makes our product stand out to the
-                                market as it doesn't only contribute to the flavor but also enhance the nutritional profile.
-                            </p>
-                        </div>
-                        <img src="IMAGES/rollingpin.png" alt="">
-                        <div class="vision">
-                            <h2>VISION</h2>
-                            <p>Fruitopia company aims to produce the best and healthy Hopia in the food industry
-                                market. Offering the best customer service. To help Filipino fruit vendors and to support
-                                local fruit farmers. Our company is aiming to expand and to grow as a successful
-                                company in the next few years.
-                            </p>
-                        </div>
+                    <div class="aboutContentscol2content">
+                        <h2>ABOUT FRUITOPIA</h2>
+                        <p>Fruitopia Food Corporation is a student-founded partnership that innovates Hopia by incorporating local fruit fillings. The company supports local farmers and aims to become the leading healthy dessert brand with a delicious, sustainable, and nutritious product.</p>
+                        <a href="HTML/about.html"><p>EXPLORE</p></a> 
                     </div>
-                    <div class="scrollCore">
-                        <div class="corevaluesTab">
-                            <div class="corevaluesContainer">
-                            <img src="IMAGES/pan.png" alt="">
-                            <h2>Innovation</h2>
-                                <p>
-                                Our company and product symbolize uniqueness and
-                                empowers the rise of innovation in food industry by combining different
-                                ingredients, flavors, and textures.
-                                </p>
-                            </div>
-                            <div class="corevaluesContainer">
-                                <img src="IMAGES/pan.png" alt="">
-                                <h2>INTEGRITY</h2>
-                                <p> "The whole is better than the sum of its parts." This quote holds the
-                                    whole reputation of Fruitopia food Corp as a company and assures everyone
-                                    that our team won't back down to our moral values and serve our customers
-                                    with honesty.
-                                </p>
-                            </div>
-                            <div class="corevaluesContainer">
-                                <img src="IMAGES/pan.png" alt="">
-                                <h2>IMPROVEMENT-DRIVEN</h2>
-                                <p>From products to service, our team will continue to
-                                    improve for the betterment of the company. We always ensure that our
-                                    customers come first.
-                                </p>
-                            </div>
-                            <div class="corevaluesContainer">
-                                <img src="IMAGES/pan.png" alt="">
-                                <h2>TEAMWORK</h2>
-                                <p>This company promotes well-coordinated and peaceful
-                                    environment because if everyone does not have any connection, everything
-                                    will fall apart.
-                                </p>
-                            </div>
-                            <div class="corevaluesContainer">
-                                <img src="IMAGES/pan.png" alt="">
-                                <h2>QUALITY</h2>
-                                <p>We ensure that our customers are served with quality—from
-                                    packaging to the food itself, it is made with quality ingredients and materials.
-                                </p>
-                            </div>
-                            <div class="corevaluesContainer">
-                                <img src="IMAGES/pan.png" alt="">
-                                <h2>PASSIONATE</h2>
-                                <p>Our team are driven by passion in order to be successful. We
-                                    work with smiles on our face while serving the best hopia you could ever
-                                    imagine.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
                 
             </div>
@@ -150,6 +82,9 @@
                                     Bold and unexpected, this hopia flavor is an explosion of contrasting tastes. The filling might be a twist of something spicy, nutty, or sour, creating a delightful contrast to the flaky, buttery exterior. It’s the kind of flavor that takes you by surprise and leaves you craving more—unpredictable, adventurous, and totally fun.
                                 </div>
                             </div> 
+                        </li>
+                        <li>
+                            <p style="font-weight: 700;">SEE MORE</p>
                         </li>
                     </ul>
                 </div>
@@ -235,7 +170,7 @@
             <div class="elementparent">
                 <div class="header_element">
                     <div class="headerElementimgcontainer">
-    
+                        
                     </div>
                 </div>
             </div>
@@ -255,11 +190,16 @@
                     <p>ORDER NOW</p>
                 </li>
             </ul>
+            <ul class="navBarmobile">
+                <li>MENU</li>
+                <li> <img class="logo" id="logo" src="IMAGES/logo.png"> </li>
+                <li>MORE <img src="IMAGES/hamburger.png" style="height: 15px;" alt=""></li>
+            </ul>
         </header>
         <section class="s1">
-            <h1 class="welcome">WELCOME <br> TO <br> FRUITOPIA!</h1>
+            
             <div class="video-container">
-                
+                <h1 class="welcome">WELCOME <br> TO <br> FRUITOPIA!</h1>
                 <video autoplay loop muted playsinline>
                   <source src="IMAGES/Media1revised.mp4" type="video/mp4">
                   
@@ -277,8 +217,13 @@
     <section class="subSection">
         <h2>FRUITOPIA</h2>
         <p>
-            At Fruitopia, we redefine traditional Hopia by infusing it with the natural goodness of fruit purees, creating a delicious and nutritious snack. Our mission is to provide high-quality, innovative, and flavorful products while supporting local fruit farmers and vendors.
-            We are committed to excellence, integrity, and continuous improvement, ensuring the best customer experience. Our passion drives us to deliver unique, high-quality snacks made with care and teamwork. As we grow, we aim to expand our reach, bringing our one-of-a-kind Hopia to more people while staying true to our values of innovation, quality, and collaboration.
+            Fruitopia Food Corporation is a partnership company started by a group of
+            students. This company aims to sell a food called “Hopia” with innovation which is
+            incorporating fruit fillings. We want to emphasize the use of local fruits; we want to
+            show and offer to our customer that our product supports local fruit vendors and
+            farmers. What we want to accomplish is to be the number one leading healthy dessert
+            company by hitting the market with this innovative product that is delicious,
+            sustainability and healthy delicacy.
         </p>
         <div class="orderButtons">
             <ul>
