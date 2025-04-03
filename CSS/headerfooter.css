@@ -42,8 +42,37 @@ header {
     background-size: contain;
     bottom: 50px;
 }
+#overlay {
+    background-color: rgba(0, 0, 0, 0.411);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+}
 .navBarmobile {
     display: none;
+}
+
+nav {
+    position: relative;
+    width: 100%;
+}
+#navbar {
+    display: none;
+}
+.navbar {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.navbar li {
+    list-style-type: none;
+    padding-block: 20px;
+}
+.navbar p {
+    margin: 0;
+    font-weight: 700;
+    padding-left: 30px;
 }
 .navBar {
     position: absolute;
@@ -55,9 +84,21 @@ header {
     list-style: none;
     width: 100%;
     z-index: 99;
+    
+}
+.navBar button {
+    display: none;
+}
+.navBarmobile button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+}
+#logobg {
+    flex-shrink: 0;
 }
 .navButtons {
-    flex: 1; /* Equal width for all items */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,8 +110,11 @@ header {
 .navBar ul :nth-child(3) {
     justify-content: center;
     align-items: center;
+
 }
 .navBar li {
+    
+    flex-shrink: 1;
     margin: auto;
     cursor: pointer;
     display: flex;
