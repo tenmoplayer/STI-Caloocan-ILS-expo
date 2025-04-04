@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/headerfooter.css">
+    <link rel="stylesheet" href="../CSS/contacts.css">
+    
+    <link rel="stylesheet" href="../CSS/mediaresponsiveness.css">
+    <script src="../JS/navbar.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="elementparent">
+            <div class="header_element">
+                <div class="headerElementimgcontainer">
+                    
+                </div>
+            </div>
+        </div>
+        
+        <ul class="navBar">
+            <li class="navButtons" id="about">
+                <p>ABOUT</p>
+            </li>
+            <li class="navButtons" id="menu">
+                <p>MENU</p>
+            </li>
+            <li class="navButtons" id="logobg" style="background-image: url(../IMAGES/aboutfixed.png); background-size: contain; background-repeat: no-repeat; background-position: center;"> <img class="logo" id="logo" src="../IMAGES/aboutfixed.png"> </li>
+            <li class="navButtons" id="contact">
+                <p>CONTACTS</p>
+            </li>
+            <li class="navButtons" id="order">
+                <p>ORDER NOW</p>
+            </li>
+        </ul>
+        <nav id="navbar">
+            <ul class="navbar">
+                <li><button id="close-sidebar-button" onclick="closeSidebar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"/></svg>
+                </button>
+                </li>
+                <li><a href="HTML/about.html"><p>ABOUT</p></a></li>
+                <li><a href=""><p>MENU</p></a></li>
+                <li><a href="HTML/contacts.html"><p>CONTACTS</p></a></li>
+                <li><a href=""><p>ORDER NOW</p></a></li>
+            </ul>
+        </nav>
+        <div id="overlay" onclick="closeSidebar()">
+        </div>
+        <ul class="navBarmobile">
+            <li>MENU</li>
+            <li> <img class="logo" id="logo" src="../IMAGES/logo.png"> </li>
+            <li> 
+                <button id="open-sidebar-button" onclick="openSidebar()">
+                    <img src="../IMAGES/hamburger.png" style="height: 20px;" alt="">
+                </button>
+            </li>
+        </ul>
+    </header>
+
+    <div class="contacts headerpagecontents" id="contactsContainer">
+        <div class="contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                <div class="contact-left-title">
+                    <h2>LEAVE US SOME FEEDBACK!</h2>
+                    <hr>
+                </div>
+                <input type="hidden" name="access_key" value="9a6cffed-aeb9-40dc-b892-955f7032c720">
+                <input type="text" name="name" placeholder="Your Name, leave empty to remain anonymous." class="contact-inputs" >
+                <input type="text" name="email" placeholder="Your Email, leave empty to remain anonymous." class="contact-inputs" >
+                <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <div class="contact-right">
+                <div class="div">
+                    <h2>GET IN TOUCH WITH US ON OUR SOCIALS</h2>
+                </div>
+                <div>
+                    <img style="border-radius: 20%;" src="../IMAGES/fbbrown.jpg" alt="">
+                    <a href="https://www.facebook.com/profile.php?id=61573540895348#"><p>Fruitopia Food Corp.</p></a> 
+                </div>
+                <div>
+                    <img style="border-radius: 20%;" src="../IMAGES/igbrown.jpg" alt="">
+                    <a href="https://www.instagram.com/fruitopia.food_corporation/?utm_source=ig_web_button_share_sheet"><p>fruitopia.food_corporation</p></a> 
+                </div>
+                <div>
+                    <img src="../IMAGES/gmail.png" alt="">
+                    <p>FruitopiaFoodCorporation@gmail.com</p>
+                </div>
+                <div>
+                    <img src="../IMAGES/call.png" alt="">
+                    <p>09455071707</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

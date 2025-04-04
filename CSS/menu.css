@@ -1,0 +1,127 @@
+body {
+    all: unset;
+    background-color: #f8f4dc;
+    overflow-x: hidden;
+}
+html {
+    overflow-x: hidden;
+}
+article {
+    height: 80vh;
+    width: 100%; 
+    position: relative;
+}
+header {
+    background-color: #ebdaba;
+}
+#logo {
+    visibility: hidden;
+}
+.a1 {
+    background-image: url(CSSBG/droop.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    animation: a1anim linear forwards;
+    animation-timeline: view();
+    animation-range: exit -200px;
+    transform-origin: center;
+    will-change: transform; /* Optimizes performance */
+}
+.a1 h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 5vw;
+    margin: 0;
+    padding-top: 100px;
+    animation: fadeout linear forwards;
+    animation-timeline: view();
+    animation-range: exit -200px;
+}
+.a2 {
+    margin-top: 50px;
+    height: auto;
+    background-color: red;
+}
+.hopiacontainer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    padding-inline: 100px;
+    justify-content: center;
+    gap: 60px;
+}
+.hopiacard {
+    padding: 20px;
+    background-color: green;
+    height: 600px;
+    background-image: url(CSSBG/bg1compressed.png);
+    background-size: cover;
+    background-size: 200%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    animation: slideInFromRight 0.8s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry;
+    
+}
+
+.hopiacard p {
+    font-size: 40px;
+    text-align: center;
+}
+.hopiacard .hopiaimg {
+    height: 300px;
+    width: 300px;
+    z-index: 10;
+}
+.title {
+    z-index: 9;
+    position: absolute;
+    top: -40px;
+    mix-blend-mode: multiply;
+    animation: silly 0.5s ease-out forwards;
+    animation-timeline: view();
+    animation-range: cover;
+}
+@keyframes fadeout {
+    to {opacity: 0;}
+}
+@keyframes a1anim {
+    45%, 100% {scale: 2;}
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateY(250px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideup {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(250px);
+        opacity: 0.5;
+    }
+}
+@keyframes silly {
+    0% {
+        
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

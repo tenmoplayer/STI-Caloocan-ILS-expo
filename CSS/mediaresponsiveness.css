@@ -30,6 +30,7 @@
         display: block;
     }
     .navBar {
+        display: none;
         margin-top: 100px;
         flex-direction: column;
         width: 100%;
@@ -55,6 +56,9 @@
     .logo {
         visibility: visible;
     }
+    .navbar a {
+        all: unset;
+    }
     .navBarmobile {
         padding: 0;
         margin: 0;
@@ -63,7 +67,7 @@
         width: 100vw;
     }
     .navBarmobile li {
-        font-weight: 700;
+        font-weight: 500;
         display: flex;
         flex: 1;
         justify-content: center;
@@ -74,7 +78,7 @@
         display: none;
     }
     .welcome {
-        font-size: 9vw;
+        font-size: 13vw;
     }
     .s1 {
         height: auto;
@@ -82,9 +86,43 @@
     .video-container {
         display: flex;
         flex-direction: column;
+        padding-block: 20px;
+    }
+    .s1 .orderButtons {
+        height: 40px;
+    }
+    .s1 ul {
+        margin: 0;
+        flex-direction: row;
+    }
+    .s1 li {
+        padding: 0;
+        padding-inline: 20px;
     }
     .s1 .orderButtons a {
         font-size: 12px;
+    }
+    .subSection {
+        height: auto;
+    }
+    .subSection .orderButtons {
+        height: 40px;
+    }
+    .subSection ul {
+        padding: 0;
+        margin: 0;
+        flex-direction: row;
+    }
+    .subSection li {
+        flex: 1;
+        padding: 0;
+        
+    }
+    .subSection a {
+        font-size: 12px;
+    }
+    .subSection img {
+        padding-inline-start: 5px;
     }
     .s2 {
         height: 300px;
@@ -92,6 +130,7 @@
     .s2 h1 {
         font-size: 24px;
     }
+    
     .s3 {
         height: 300px;
     }
@@ -107,14 +146,38 @@
 
 
 
-
-
-
-
-
-
-
-
+    .headerpagecontents {
+        padding-top: 50px;
+    }
+    .contacts {
+        width: 100%;
+    }
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-left {
+        display: flex;
+        align-items: center;
+    }
+    .contact-inputs {
+        margin: 0;
+    }
+    .contact-left-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contact-left-title h2 {
+        text-align: center;
+    }
+    .contact-left-title hr {
+        margin-left: auto;
+    }
+    .contact-right p {
+        font-weight: 600;
+    }
 
 
 

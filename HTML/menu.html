@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/headerfooter.css">
+    <link rel="stylesheet" href="../CSS/mediaresponsiveness.css">
+    <link rel="stylesheet" href="../CSS/menu.css">
+    <script src="../JS/navbar.js" defer></script>
+    <title>Menu</title>
+</head>
+<body>
+    <header>
+        <div class="elementparent">
+            <div class="header_element">
+                <div class="headerElementimgcontainer">
+                    
+                </div>
+            </div>
+        </div>
+        
+        <ul class="navBar">
+            <li class="navButtons" id="about">
+                <p>ABOUT</p>
+            </li>
+            <li class="navButtons" id="menu">
+                <p>MENU</p>
+            </li>
+            <li class="navButtons" id="logobg" style="background-image: url(../IMAGES/menu.png); background-size: contain; background-repeat: no-repeat; background-position: center;"> <img class="logo" id="logo" src="../IMAGES/menu.png"> </li>
+            <li class="navButtons" id="contact">
+                <p>CONTACTS</p>
+            </li>
+            <li class="navButtons" id="order">
+                <p>ORDER NOW</p>
+            </li>
+        </ul>
+        <nav id="navbar">
+            <ul class="navbar">
+                <li><button id="close-sidebar-button" onclick="closeSidebar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"/></svg>
+                </button>
+                </li>
+                <li><a href="HTML/about.html"><p>ABOUT</p></a></li>
+                <li><a href=""><p>MENU</p></a></li>
+                <li><a href="HTML/contacts.html"><p>CONTACTS</p></a></li>
+                <li><a href=""><p>ORDER NOW</p></a></li>
+            </ul>
+        </nav>
+        <div id="overlay" onclick="closeSidebar()">
+        </div>
+        <ul class="navBarmobile">
+            <li>MENU</li>
+            <li> <img class="logo" id="logo" src="../IMAGES/logo.png"> </li>
+            <li> 
+                <button id="open-sidebar-button" onclick="openSidebar()">
+                    <img src="../IMAGES/hamburger.png" style="height: 20px;" alt="">
+                </button>
+            </li>
+        </ul>
+    </header>
+    <article class="a1">
+        <h1>ANONG FILLING MO TODAY?</h1>
+    </article>
+    <article class="a2">
+        <div class="hopiacontainer">
+            <div class="hopiacard">
+                <img class="title" src="../IMAGES/download.png" alt="">
+                <img class="hopiaimg" src="../IMAGES/mango.png" alt="">
+                <p>Mango filling that is tropical and smooth, with a touch of zesty flavor and a balance of sweetness.</p>
+            </div>
+            <div class="hopiacard">
+                <img class="title" src="../IMAGES/download.png" alt="">
+                <img class="hopiaimg" src="../IMAGES/berry.png" alt="">
+                <p>
+                    Strawberry delight with sweet and juicy goodness , ideal for a fruity burst with each bite.
+                </p>
+            </div>
+            <div class="hopiacard">
+                <img class="title" src="../IMAGES/download.png" alt="">
+                <img class="hopiaimg" src="../IMAGES/berry.png" alt="">
+                <p>
+                    Mango filling that is tropical and smooth, with a touch of zesty flavor and a balance of sweetness.
+                </p>
+            </div>
+            <div class="hopiacard">
+                <img class="title" src="../IMAGES/download.png" alt="">
+                <img class="hopiaimg" src="../IMAGES/mango.png" alt="">
+                <p>Mango filling that is tropical and smooth, with a touch of zesty flavor and a balance of sweetness.</p>
+            </div>
+        </div>
+    </article>
+    <article>
+
+    </article>
+</body>
+</html>
