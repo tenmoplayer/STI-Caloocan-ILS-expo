@@ -126,11 +126,18 @@
     }
     .s2 {
         height: 300px;
+        width: 100vw;
     }
     .s2 h1 {
         font-size: 24px;
     }
-    
+    .s2 .s2container {
+        min-width: 100%;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
     .s3 {
         height: 300px;
     }
@@ -183,5 +190,7 @@
 
 
 
-
+    .slider-wrapper {
+        width: 100%;
+    }
   }

@@ -28,6 +28,10 @@ header {
     align-items: center;
     height: 15svh; /* Adjust based on your design */
     padding: 10px;
+    background-image: url(CSSBG/header_element_fixed.png);
+    background-position-y: -60px;
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 .elementparent {
     position: relative;
