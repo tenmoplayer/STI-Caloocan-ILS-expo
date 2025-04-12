@@ -1,0 +1,65 @@
+
+article {
+    height: 80vh;
+}
+.a1 {
+    margin-top: 40px;
+    height: 75vh;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+.a1 .desktop {
+    position: relative;
+    width: 700px;
+    min-height: 500px;
+    height: auto;
+}
+.a1 .monitor {
+    width: 700px;
+    min-height: 500px;
+    height: auto;
+}
+.a1 .logod {
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    height: 350px;
+}
+.logo {
+    visibility: hidden;
+}
+.a1 h1 {
+    justify-self: center;
+    font-size: 4vw;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    padding-inline: 100px;
+}
+.a1 .qr {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    mix-blend-mode: multiply;
+}
+.a1 a {
+    all: unset;
+    position: absolute;
+    top: 330px;
+    right: 100px;
+    cursor: pointer;
+}
+.a2 {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+.a2 img {
+    height: 100%;
+}
+hr {
+    border: 1px solid black;
+    width: 60%;
+}

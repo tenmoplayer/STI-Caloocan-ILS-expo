@@ -29,7 +29,6 @@ header {
     margin-top: 40px;
     font-weight: 700;
     font-size: 5vw;
-
     padding-top: 100px;
     animation: fadeout linear forwards;
     animation-timeline: view();
@@ -66,6 +65,17 @@ header {
     justify-content: center;
     gap: 60px;
 }
+.backdrop {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    border-radius: 20px;
+    
+    background-image: url(CSSBG/bg1compressed.png);
+    background-size: cover;
+    background-size: 200%;
+    z-index: 1;
+}
 .hopiacard {
     padding: 20px;
     background-color: green;
@@ -94,23 +104,54 @@ header {
     width: 300px;
     z-index: 10;
 }
+#apple {
+    filter: drop-shadow(5px 5px 30px #fe3939);
+}
+#mango {
+    filter: drop-shadow(5px 5px 30px #f0dc00);
+}
+#strawberry {
+    filter: drop-shadow(5px 5px 30px #ff007b);
+}
+#pandan {
+    filter: drop-shadow(5px 5px 30px #37ff29);
+}
 .bottomElement {
     position: absolute;
     bottom: 0;
     margin-bottom: -20px;
     width: 100%;
     height: 30px;
+    z-index: 2;
 }
 .title {
     z-index: 9;
     position: absolute;
-    top: -40px;
-    mix-blend-mode: multiply;
+    top: -60px;
     animation: silly 0.5s ease-out forwards;
     animation-timeline: view();
     animation-range: contain;
-    background-color: white;
+    background-color: transparent;
+    animation-fill-mode: both;
+    will-change: transform;
+    transform: translateZ(0);
 }
+.filling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -60px;
+    margin-left: -150px;
+    transform: rotate(-50deg);
+    z-index: 10;
+    animation: filling-left 0.5s ease-out forwards;
+    animation-timeline: view();
+    animation-range: cover;
+    
+    animation-fill-mode: both;
+}
+
+
 @keyframes fadeout {
     to {
         opacity: 0;
@@ -131,16 +172,6 @@ header {
         opacity: 1;
     }
 }
-@keyframes slideup {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(250px);
-        opacity: 0.5;
-    }
-}
 @keyframes silly {
     0% {
         
@@ -150,5 +181,19 @@ header {
     50% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+@keyframes filling-left {
+    0% {
+        transform: translateY(250px);
+        opacity: 1;
+        
+        transform: rotate(-50deg);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        
+        transform: rotate(-50deg);
     }
 }
