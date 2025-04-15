@@ -1,6 +1,8 @@
 
 #contactsContainer {
-    background: linear-gradient(135deg, #f5f5dc, #d6b18a);
+    
+    animation: transitionInonly 0.75s;
+    background: none;
     justify-content: space-evenly;
     column-gap: 30px;
 }
@@ -56,6 +58,10 @@
     padding-block: 40px;
     border-bottom: 1px solid black;
 }
+.intouch {
+    padding: 0px;
+    margin: 0;
+}
 .contact-right a {
     all: unset;
     cursor: pointer;
@@ -68,7 +74,9 @@
 }
 
 
-
+#logo {
+    visibility: hidden;
+}
 .contact-inputs:focus {
     border: 2px solid burlywood;
 }

@@ -1,5 +1,7 @@
 
 article {
+    
+    animation: transitionInonly 0.75s;
     height: 80vh;
 }
 .a1 {

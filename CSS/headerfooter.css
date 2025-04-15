@@ -127,7 +127,7 @@ nav {
     font-weight: 500;
 }
 .navBar p:hover {
-    background-color: blue;
+    opacity: 0.5;
 }
 .logo {
     top: 15px;
@@ -310,7 +310,7 @@ nav {
     width: 100%;
     height: 85%;
     display: grid;
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: 25% 1fr;
     column-gap: 30px;
 }
 .menu h2 {
@@ -361,7 +361,6 @@ nav {
 }
 
 .menuContentscol2 {
-    background-color: red;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, 300px);
@@ -370,17 +369,47 @@ nav {
     justify-content: center;
 }
 .hopiaItemContainer {
-    background-color: green;
+    background-image: url(CSSBG/bg1compressedhopia.png);
+    height: 350px;
+    background-size: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 50% 50%;
     border-radius: 15px;
     
 }
 .hopiaImgContainer {
-    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 15px;
+}
+.hopiaImgContainer :last-child {
+    height: 250px;
+}
+#mango {
+
+    filter: drop-shadow(5px 5px 30px #f0dc00);
+}
+#pandan {
+
+    filter: drop-shadow(5px 5px 30px #37ff29);
+}
+#straw {
+    height: 180px;
+    
+    filter: drop-shadow(5px 5px 30px #ff007b);
+}
+#appled {
+    height: 300px;
+    
+    filter: drop-shadow(5px 5px 30px #fe3939);
 }
 .hopiaDescription {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .hopiaDescription p {
     text-align: justify;
@@ -390,9 +419,45 @@ nav {
 }
 .hopiaDescription img {
     position: absolute;
-    bottom: -15px;
+    bottom: -17px;
     width: 100%;
 }
+.title {
+    z-index: 9;
+    position: absolute;
+    top: -30px;
+    background-color: transparent;
+    height: 190px;
+}
+.seemore {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid white;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+.desc a {
+    all: unset;
+}
+.seemore:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.ha {
+    overflow: hidden;
+}
+.ha img{
+    position: absolute;
+    height: 200px;
+}
+
+
+
+
+
+
+
+
 
 .about, .menu {
     opacity: 0;
@@ -515,4 +580,32 @@ nav {
 
 
 
-
+footer {
+    margin-top: 5%;
+    padding-block-start: 20px;
+    height: 100px;
+    background-color: #a77f56;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+footer div {
+    display: flex;
+    gap: 20px;
+}
+footer img {
+    height: 30px;
+    border-radius: 20px;
+}
+nav a  {
+    all: unset;
+}
+@keyframes transitionInonly {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

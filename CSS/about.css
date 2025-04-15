@@ -1,6 +1,8 @@
 article {
     height: 80vh;
     position: relative;
+    
+    animation: transitionInonly 0.75s;
 }
 .a1 {
     display: grid;
@@ -67,15 +69,15 @@ article {
     height: 600px;
     position: relative;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    display: flex;
+    justify-content: center;
 }
 .corevalues h2 {
-    padding-inline: 200px;
     text-align: center;
     font-weight: 700;
 }
 .corevalues p {
     text-align: center;
-    padding-inline: 170px;
     font-size: 20px;
 }
 .corevaluesheader {
@@ -95,6 +97,9 @@ article {
     height: 40px;
     background-size: cover;
     background-image: url(CSSBG/hopiaproductelement.png);
+}
+.h2p {
+    width: 250px;
 }
 @media only screen and (max-width: 600px) {
     body {

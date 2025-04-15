@@ -14,22 +14,24 @@
 </head>
 <body>
     <header>
+        <nav>
+            <ul class="navBar">
+                <li class="navButtons" id="about">
+                    <a href="about.html"><p>ABOUT</p></a>
+                </li>
+                <li class="navButtons" id="menu">
+                    <a href="../index.html"><p>HOME</p></a>
+                </li>
+                <li class="navButtons" id="logobg" style="background-image: url(../IMAGES/menu.png); background-size: contain; background-repeat: no-repeat; background-position: center;"> <img class="logo" id="logo" src="../IMAGES/menu.png"> </li>
+                <li class="navButtons" id="contact">
+                    <a href="contacts.html"><p>CONTACTS</p></a>
+                </li>
+                <li class="navButtons" id="order">
+                    <a href="order.html"><p>ORDER NOW</p></a>
+                </li>
+            </ul>
+        </nav>
         
-        <ul class="navBar">
-            <li class="navButtons" id="about">
-                <p>ABOUT</p>
-            </li>
-            <li class="navButtons" id="menu">
-                <p>MENU</p>
-            </li>
-            <li class="navButtons" id="logobg" style="background-image: url(../IMAGES/menu.png); background-size: contain; background-repeat: no-repeat; background-position: center;"> <img class="logo" id="logo" src="../IMAGES/menu.png"> </li>
-            <li class="navButtons" id="contact">
-                <p>CONTACTS</p>
-            </li>
-            <li class="navButtons" id="order">
-                <p>ORDER NOW</p>
-            </li>
-        </ul>
         <nav id="navbar">
             <ul class="navbar">
                 <li><button id="close-sidebar-button" onclick="closeSidebar()">
@@ -58,13 +60,23 @@
         <div class="ooze_container">
 
         </div>
-        
+        <div class="moving-header">
+            <img src="../IMAGES/mangopic.png" alt="">
+            <img src="../IMAGES/strawberrypic - Copy.png" alt="">
+        </div>
+        <div class="moving-header row2">
+            <img src="../IMAGES/applepic.png" alt="">
+            <img src="../IMAGES/pandanpic - Copy.png" alt="">
+        </div>
         <h1>ANONG FILLING MO TODAY?</h1>
     </article>
     <article class="a2">
         <div class="hopiacontainer">
             <div class="hopiacard">
-                <p class="filling">FILLING SILLY?</p>
+                <div class="moving">
+                    <img src="../IMAGES/mangopic.png" alt="">
+                    <img src="../IMAGES/mangopic - Copy.png" alt="">
+                </div>
                 <img class="title" id="mango" src="../IMAGES/silly_mango.png" alt="">
                 <img id="mango" class="hopiaimg" src="../IMAGES/hopiamango.png" alt="">
                 <p>
@@ -73,6 +85,10 @@
                 <img class="bottomElement" src="../IMAGES/hopiaproductelement.png" alt="">
             </div>
             <div class="hopiacard">
+                <div class="moving">
+                    <img src="../IMAGES/strawberrypic.png" alt="">
+                    <img src="../IMAGES/strawberrypic - Copy.png" alt="">
+                </div>
                 <img class="title" id="strawberry" src="../IMAGES/berry_lovely.png" alt="">
                 <img id="strawberry" class="hopiaimg" src="../IMAGES/hopiastrawberry.png" alt="">
                 <p>
@@ -81,6 +97,10 @@
                 <img class="bottomElement" src="../IMAGES/hopiaproductelement.png" alt="">
             </div>
             <div class="hopiacard">
+                <div class="moving">
+                    <img src="../IMAGES/applepic.png" alt="">
+                    <img src="../IMAGES/applepic - Copy.png" alt="">
+                </div>
                 <img class="title" id="apple" src="../IMAGES/blissful_apple.png" alt="">
                 <img id="apple" class="hopiaimg" src="../IMAGES/hopiaapple.png" alt="">
                 <p>
@@ -89,6 +109,10 @@
                 <img class="bottomElement" src="../IMAGES/hopiaproductelement.png" alt="">
             </div>
             <div class="hopiacard">
+                <div class="moving">
+                    <img src="../IMAGES/pandanpic.png" alt="">
+                    <img src="../IMAGES/pandanpic - Copy.png" alt="">
+                </div>
                 <img class="title" id="pandan" src="../IMAGES/buco_loco.png" alt="">
                 <img id="pandan" class="hopiaimg" src="../IMAGES/hopiapandan.png" alt="">
                 <p>
@@ -98,8 +122,68 @@
             </div>
         </div>
     </article>
-    <article>
+    <article class="a3">
+        <h2>MATCH YOUR FRUITY AND HEALTHY HOPIA WITH YOUR SELECTED ACCOMPANIMENT</h2>
+        <div class="drinkscontainer">
+            <div class="drinkscard">
+                <img class="bottomElement" src="../IMAGES/hopiaproductelement.png" alt="">
+                
+                <img class="bottomElement elemleft" src="../IMAGES/hopiaproductelementleft.png" alt="">
+                
+                <img class="bottomElement elemright" src="../IMAGES/hopiaproductelementright.png" alt="">
+                
+                <img class="bottomElement elemtop" src="../IMAGES/hopiaproductelement.png" alt="">
+                <div class="partition" id="top">
+                    <div class="sauce">
+                        <img src="../IMAGES/chocosauce.png" alt="">
+                        <p>DARK CHOCOLATE SAUCE</p>
+                    </div>
+                </div>
+                <div class="partition" id="bottom">
+                    <div class="sauce">
+                        <p>CARAMEL SAUCE</p>
+                        <img src="../IMAGES/caramel.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="drinkscard">
+                
+                <img class="bottomElement" src="../IMAGES/hopiaproductelement.png" alt="">
+                
+                <img class="bottomElement elemleft" src="../IMAGES/hopiaproductelementleft.png" alt="">
+                
+                <img class="bottomElement elemright" src="../IMAGES/hopiaproductelementright.png" alt="">
+                
+                <img class="bottomElement elemtop" src="../IMAGES/hopiaproductelement.png" alt="">
 
+                <div class="partition" id="top">
+                    <div class="sauce right">
+                        <img src="../IMAGES/coffeeblack.png" alt="">
+                        <div>
+                            <p>HOT/COLD</p>
+                            <p>BLACK COFFEE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="partition" id="bottom">
+                    <div class="sauce right">
+                        <div>
+                            <p>HOT/COLD</p>
+                            
+                        <p>COFFEE LATTE</p>
+                        </div>
+                        <img src="../IMAGES/coffees.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </article>
+    <footer>
+        <div class="footer-icon">
+            <img src="../IMAGES/fbbrown.jpg" alt="">
+            <img src="../IMAGES/igbrown.jpg" alt="">
+        </div>
+        <p>Fruitopia Food Corp.</p>
+    </footer>
 </body>
 </html>

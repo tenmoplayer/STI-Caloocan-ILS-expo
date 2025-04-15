@@ -43,7 +43,7 @@
                     <div class="aboutContentscol2content">
                         <h2>ABOUT FRUITOPIA</h2>
                         <p>Fruitopia Food Corporation is a student-founded partnership that innovates Hopia by incorporating local fruit fillings. The company supports local farmers and aims to become the leading healthy dessert brand with a delicious, sustainable, and nutritious product.</p>
-                        <a href="HTML/about.html"><p>EXPLORE</p></a> 
+                        <a href="HTML/about.html"><p>LEARN MORE</p></a> 
                     </div>
                 </div>
                 
@@ -86,15 +86,14 @@
                                 </div>
                             </div> 
                         </li>
-                        <li>
-                            <p style="font-weight: 700;">SEE MORE</p>
-                        </li>
                     </ul>
                 </div>
                 <div class="menuContentscol2">
                     <div class="hopiaItemContainer">
                         <div class="hopiaImgContainer">
-                            IMG PLACEHOLDER
+                            
+                            <img class="title" id="mango" src="../IMAGES/silly_mango.png" alt="">
+                            <img id="mango" src="IMAGES/hopia_mango.png" alt="">
                         </div>
                         <div class="hopiaDescription">
                             <p>Mango filling that is tropical and smooth, with a touch of zesty flavor and a balance of sweetness.</p>
@@ -103,28 +102,54 @@
                     </div>
                     <div class="hopiaItemContainer">
                         <div class="hopiaImgContainer">
-                            IMG PLACEHOLDER
+                            
+                <img class="title" id="strawberry" src="../IMAGES/berry_lovely.png" alt="">
+                            <img id="straw" src="IMAGES/hopia_strawberry.png" alt="">
                         </div>
                         <div class="hopiaDescription">
-                            <p>Mango filling that is tropical and smooth, with a touch of zesty flavor and a balance of sweetness.</p>
+                            <p>
+                                Strawberry delight with sweet and juicy goodness, ideal for a fruity burst with each bite.</p>
                             <img src="/IMAGES/hopiaproductelement.png" alt="">
                         </div>
                     </div>
                     <div class="hopiaItemContainer">
                         <div class="hopiaImgContainer">
-                            IMG PLACEHOLDER
+                            
+                <img class="title" id="apple" src="../IMAGES/blissful_apple.png" alt="">
+                            <img id="appled" src="IMAGES/hopia_apple.png" alt="">
                         </div>
                         <div class="hopiaDescription">
-                            <p>Mango filling that is tropical and smooth, with a touch of zesty flavor and a balance of sweetness.</p>
+                            <p>
+                                A classic and cozy apple filling with a blend of sweetness and cinnamon.</p>
                             <img src="/IMAGES/hopiaproductelement.png" alt="">
                         </div>
                     </div>
                     <div class="hopiaItemContainer">
                         <div class="hopiaImgContainer">
-                            IMG PLACEHOLDER
+                            
+                <img class="title" id="pandan" src="../IMAGES/buco_loco.png" alt="">
+                            <img id="pandan" src="IMAGES/hopia_pandan.png" alt="">
+                            
                         </div>
                         <div class="hopiaDescription">
-                            <p>Mango filling that is tropical and smooth, with a touch of zesty flavor and a balance of sweetness.</p>
+                            <p>
+                                Rich and reviving  creamy combination of young coconut and pandan flavor.</p>
+                            <img src="/IMAGES/hopiaproductelement.png" alt="">
+                        </div>
+                    </div>
+                    <div class="hopiaItemContainer">
+                        <div class="hopiaImgContainer ha">
+                            <img id="pandan" style="left: 0; margin-left: -40px;" src="IMAGES/hopiapandan.png" alt="">
+                            <img style="filter: drop-shadow(5px 5px 30px #fe3939); margin-right: 90px;" src="IMAGES/hopiaapple.png" alt="">
+                            <img style="margin-left: 40px;    filter: drop-shadow(5px 5px 30px #ff007b2a);" src="IMAGES/hopiastrawberry.png" alt="">
+                            <img id="mango" style="right: 0; margin-right: -90px;" src="IMAGES/hopiamango.png" alt="">
+                        </div>
+                        <div class="hopiaDescription desc">
+                            <a href="HTML/menu.html">
+                                
+                            <p class="seemore">SEE MORE</p>
+                            </a>
+                            
                             <img src="/IMAGES/hopiaproductelement.png" alt="">
                         </div>
                     </div>
@@ -173,17 +198,17 @@
             <nav>
                 <ul class="navBar">
                     <li class="navButtons" id="about">
-                        <p>ABOUT</p>
+                        <a href="#"><p>ABOUT</p></a>
                     </li>
                     <li class="navButtons" id="menu">
-                        <p>MENU</p>
+                        <a href="#"><p>MENU</p></a>
                     </li>
                     <li class="navButtons navlogo"> <img class="logo" id="logo" src="IMAGES/logo.png"> </li>
                     <li class="navButtons" id="contact">
-                        <p>CONTACTS</p>
+                        <a href="#"><p>CONTACTS</p></a>
                     </li>
                     <li class="navButtons" id="order">
-                        <p>ORDER NOW</p>
+                        <a href="HTML/order.html"><p>ORDER NOW</p></a>
                     </li>
                 </ul>
             </nav>
@@ -196,7 +221,7 @@
                     <li><a href="HTML/about.html"><p>ABOUT</p></a></li>
                     <li><a href="HTML/menu.html"><p>MENU</p></a></li>
                     <li><a href="HTML/contacts.html"><p>CONTACTS</p></a></li>
-                    <li><a href=""><p>ORDER NOW</p></a></li>
+                    <li><a href="HTML/order.html"><p>ORDER NOW</p></a></li>
                 </ul>
             </nav>
             <div id="overlay" onclick="closeSidebar()">
@@ -223,8 +248,8 @@
                 </video>
                 <div class="orderButtons">
                     <ul>
-                        <li><img src="IMAGES/add-cart-white.png" alt=""><a href="#" style="color: white;">ORDER NOW</a></li>
-                        <li><a class="a2d" href="#">ANO FILLING MO?</a></li>
+                        <li><img src="IMAGES/add-cart-white.png" alt=""><a href="HTML/order.html" style="color: white;">ORDER NOW</a></li>
+                        <li><a class="a2d" href="HTML/menu.html">ANO FILLING MO?</a></li>
                     </ul>
                 </div>
             </div>
@@ -243,8 +268,8 @@
         </p>
         <div class="orderButtons">
             <ul>
-                <li><img src="IMAGES/about-invert.png" alt=""><a href="#" style="color: white;">ABOUT FRUITOPIA</a></li>
-                <li><a class="a2d" href="#">CONTACT US</a></li>
+                <li><img src="IMAGES/about-invert.png" alt=""><a href="HTML/about.html" style="color: white;">ABOUT FRUITOPIA</a></li>
+                <li><a class="a2d" href="HTML/contacts.html">CONTACT US</a></li>
             </ul>
         </div>
     </section>
@@ -263,7 +288,7 @@
             <div class="slider">
                 <div id="slide-1"><img src="IMAGES/groupedfixed.png" alt="..." /></div>
                 <div id="slide-2"><img src="IMAGES/coffee.jpg" alt="..." /></div>
-                <div id="slide-3"><img src="..." alt="..." /></div>
+                <div id="slide-3"><img src="IMAGES/contactha.jpg" alt="..." /></div>
             </div>            
             <div class="slider-nav">
                 <a href="#slide-1"></a>
@@ -288,7 +313,11 @@
     </section>
 
     <footer>
-
+        <div class="footer-icon">
+            <img src="../IMAGES/fbbrown.jpg" alt="">
+            <img src="../IMAGES/igbrown.jpg" alt="">
+        </div>
+        <p>Fruitopia Food Corp.</p>
     </footer>
 
 </body>

@@ -124,6 +124,27 @@ header {
     height: 30px;
     z-index: 2;
 }
+.elemtop {
+    top: 0;
+    margin-top: -20px;
+    transform: rotate(180deg);
+}
+.elemright {
+    top: 50%;
+    height: 100%;
+    width: 30px;
+    margin-right: -20px;
+    transform: translateY(-50%);
+    right: 0;
+}
+.elemleft {
+    top: 50%;
+    height: 100%;
+    width: 30px;
+    margin-left: -20px;
+    transform: translateY(-50%);
+    left: 0;
+}
 .title {
     z-index: 9;
     position: absolute;
@@ -135,6 +156,7 @@ header {
     animation-fill-mode: both;
     will-change: transform;
     transform: translateZ(0);
+    height: 324px;
 }
 .filling {
     position: absolute;
@@ -151,13 +173,121 @@ header {
     animation-fill-mode: both;
 }
 
-
+.moving {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 50%;
+    top: 100px;
+    z-index: 99;
+}
+.moving img {
+    height: 130px;
+    animation: swing 2s infinite ease-in-out;
+}
+.moving :last-child {
+    height: 130px;
+    animation: swing-invert 2s infinite ease-in-out;
+}
+.moving-header {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 50%;
+    top: 90px;
+    z-index: 99;
+    animation: fadeout-moving-header linear forwards;
+    animation-timeline: view();
+    animation-range: exit -200px;
+}
+.moving-header img {
+    height: 200px;
+    animation: swing 2s infinite ease-in-out;
+}
+.moving-header :last-child {
+    animation: swing-invert 2s infinite ease-in-out;
+}
+.row2 {
+    top: 290px;
+    gap: 30%;
+}
+.a3 {
+    margin-top: 5%;
+    height: auto;
+}
+.a3 h2{
+    font-size: 40px;
+    text-align: center;
+}
+.drinkscontainer {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    padding-inline: 100px;
+    justify-content: center;
+    gap: 60px;
+    position: relative;
+}
+.drinkscard {
+    padding: 20px;
+    background-color: green;
+    height: 600px;
+    background-image: url(CSSBG/bg1compressed.png);
+    background-size: cover;
+    background-size: 200%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    animation: slideInFromRight 0.8s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry;
+    border-radius: 20px;
+    position: relative;
+}
+.partition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sauce {
+    background-color: #976835b9;
+    border-radius: 60px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right {
+    gap: 40px;
+}
+.sauce img {
+    height: 230px;
+}
+.sauce p {
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+}
+.sauce div :first-child {
+    font-size: 16px;
+}
 @keyframes fadeout {
     to {
         opacity: 0;
         transform: translate(-50%) scale(1.5);
     }
 }
+@keyframes fadeout-moving-header {
+    to {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
 
 @keyframes a1anim {
     60%, 100% {transform: translateY(300px); scale: 1.5;}
@@ -196,4 +326,18 @@ header {
         
         transform: rotate(-50deg);
     }
+}
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+  }
+@keyframes swing-invert {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
 }
