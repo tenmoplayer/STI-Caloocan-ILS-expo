@@ -7,6 +7,9 @@
     box-sizing: border-box;
     
 }
+:root {
+    --times-new-roman: 'Times New Roman', Times, serif;
+}
 html {
     overflow-x: hidden;
 }
@@ -491,7 +494,10 @@ nav {
     background: linear-gradient(135deg, #f5f5dc, #d6b18a);
 }
 #contactsContainer {
-    background: linear-gradient(135deg, #f5f5dc, #d6b18a);
+    
+    animation: transitionInonly 0.75s;
+    background-image: url(CSSBG/bg1compressed.png);
+    background-size: contain;
     justify-content: space-evenly;
     column-gap: 30px;
 }
@@ -547,6 +553,10 @@ nav {
     padding-block: 40px;
     border-bottom: 1px solid black;
 }
+.intouch {
+    padding: 0px;
+    margin: 0;
+}
 .contact-right a {
     all: unset;
     cursor: pointer;
@@ -557,7 +567,6 @@ nav {
 .contact-right div img {
     height: 30px;
 }
-
 
 
 .contact-inputs:focus {

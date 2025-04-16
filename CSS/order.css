@@ -1,6 +1,5 @@
 
 article {
-    
     animation: transitionInonly 0.75s;
     height: 80vh;
 }
@@ -65,3 +64,140 @@ hr {
     border: 1px solid black;
     width: 60%;
 }
+.a3 {
+    height: 100vh;
+    width: 100vw;
+    padding-inline: 50px;
+}
+.a3Container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 50% 50%;
+    position: relative;
+}
+.prize {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    position: relative;
+}
+.prize p {
+    font-weight: 600;
+    font-size: 65px;
+}
+.normal, .bounce, .wild {
+    right: 0;
+    position: absolute;
+    height: 150px;
+    animation: moveMiniSquare 4s infinite ease-in-out;
+}
+.scroll {
+    height: 900px;
+}
+.textna {
+    background-image: url(../IMAGES/scroll.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.textcontainer {
+    position: absolute;
+    height: 90%;
+    width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-block: 10%;
+}
+ .bounce {
+    
+    animation: moveMiniSquarecc 4s infinite ease-in-out;
+}
+@keyframes moveMiniSquare {
+    0% {
+      top: 0;
+      left: 0;
+      transform: scale(1.2) rotate(-10deg) translate(-5px, -3px);
+    }
+    10% {
+      transform: scale(1) rotate(0deg);
+    }
+
+    25% {
+      top: 0;
+      left: 50px;
+      transform: scale(1.2) rotate(10deg) translate(5px, -3px);
+    }
+    35% {
+      transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+      top: 50px;
+      left: 50px;
+      transform: scale(1.2) rotate(-10deg) translate(3px, 5px);
+    }
+    60% {
+      transform: scale(1) rotate(0deg);
+    }
+
+    75% {
+      top: 50px;
+      left: 0;
+      transform: scale(1.2) rotate(10deg) translate(-5px, 3px);
+    }
+    85% {
+      transform: scale(1) rotate(0deg);
+    }
+
+    100% {
+      top: 0;
+      left: 0;
+      transform: scale(1.2) rotate(-10deg) translate(-3px, -5px);
+    }
+  }
+  @keyframes moveMiniSquarecc {
+    0% {
+      top: 0;
+      left: 0;
+      transform: scale(1.2) rotate(-10deg) translate(-5px, -3px);
+    }
+    10% {
+      transform: scale(1) rotate(0deg);
+    }
+  
+    25% {
+      top: 50px;
+      left: 0;
+      transform: scale(1.2) rotate(10deg) translate(-5px, 3px);
+    }
+    35% {
+      transform: scale(1) rotate(0deg);
+    }
+  
+    50% {
+      top: 50px;
+      left: 50px;
+      transform: scale(1.2) rotate(-10deg) translate(3px, 5px);
+    }
+    60% {
+      transform: scale(1) rotate(0deg);
+    }
+  
+    75% {
+      top: 0;
+      left: 50px;
+      transform: scale(1.2) rotate(10deg) translate(5px, -3px);
+    }
+    85% {
+      transform: scale(1) rotate(0deg);
+    }
+  
+    100% {
+      top: 0;
+      left: 0;
+      transform: scale(1.2) rotate(-10deg) translate(-3px, -5px);
+    }
+  }

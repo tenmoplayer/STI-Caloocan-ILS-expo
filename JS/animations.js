@@ -227,3 +227,7 @@ window.addEventListener('click', (e) => {
         }
     });
 });
+function order() {
+    // Change this to your target HTML file
+    window.location.href = "../HTML/order.html";
+  }
