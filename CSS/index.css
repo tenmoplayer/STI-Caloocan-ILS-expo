@@ -3,6 +3,14 @@ section {
     height: 80vh;
     position: relative;
 }
+h1, h2 {
+    font-family: var(--merri);
+  font-style: normal;
+  font-weight: bolder;
+}
+p {
+    font-family: var(--times);
+}
 .video-container {
     overflow: hidden;
     position: relative;
@@ -30,6 +38,7 @@ h1 {
 
 .welcome {
     text-align: center;
+    font-family: var(--poppins);
     font-size: clamp(2rem, calc(6vw + 1rem), 5rem);
     width: 100%;
 }
@@ -102,6 +111,7 @@ h1 {
 }
 .subSection h2 {
     font-size: 40px;
+    margin-bottom: 0;
 }
 .subSection h2 {
     text-align: center;
@@ -292,7 +302,7 @@ h1 {
 
 .slider-wrapper {
 	position: relative;
-	width: 70%;
+	width: 85%;
 	margin: 0 auto;
 }
 

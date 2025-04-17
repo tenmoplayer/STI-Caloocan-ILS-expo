@@ -141,3 +141,36 @@ body {
 .grid img {
     height: 400px;
 }
+.contacts {
+    height: 90vh;
+}
+@media only screen and (max-width: 620px) {
+    body {
+        overflow: auto;
+    }
+    .a1 {
+        height: 300px;
+    }
+    footer {
+        position: relative;
+    }
+    .contacts {
+        height: auto;
+    }
+    .backdrop-content h1 {
+        font-size: large;
+    }
+    .grid {
+        width: 80%;
+    }
+    .grid p {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    .grid img {
+        height: 150px;
+    }
+    .grid a {
+        font-size: 10px;
+    }
+}

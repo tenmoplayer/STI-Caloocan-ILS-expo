@@ -1,4 +1,7 @@
 @media only screen and (max-width: 600px) {
+    * {
+        box-sizing: border-box;
+    }
     html {
         overflow-x: hidden;
     }
@@ -53,7 +56,7 @@
     }
     
     
-    .logo {
+    #logo {
         visibility: visible;
     }
     .navbar a {
@@ -106,20 +109,22 @@
         height: auto;
     }
     .subSection .orderButtons {
-        height: 40px;
     }
     .subSection ul {
+        display: grid;
         padding: 0;
         margin: 0;
-        flex-direction: row;
+        grid-template-rows: 50% 50%;
+        height: auto;
+        row-gap: 10px;
     }
     .subSection li {
-        flex: 1;
+        height: 35px;
         padding: 0;
-        
     }
     .subSection a {
         font-size: 12px;
+        padding-inline: 10px;
     }
     .subSection img {
         padding-inline-start: 5px;

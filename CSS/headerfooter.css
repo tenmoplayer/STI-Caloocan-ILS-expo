@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 * {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -8,7 +17,11 @@
     
 }
 :root {
-    --times-new-roman: 'Times New Roman', Times, serif;
+    --poppins: "Poppins", sans-serif;
+    --times: 'Times New Roman', Times, serif;
+    --poetsen: "Poetsen One", sans-serif;
+    --winky: "Winky Rough", sans-serif;
+    --merri: "Merriweather", serif;
 }
 html {
     overflow-x: hidden;
@@ -76,6 +89,9 @@ nav {
     list-style-type: none;
     padding-block: 20px;
 }
+.navbar li p {
+    font-family: var(--poppins);
+}
 .navbar p {
     margin: 0;
     font-weight: 700;
@@ -128,6 +144,8 @@ nav {
 }
 .navBar li p {
     font-weight: 500;
+    
+    font-family: var(--poppins);
 }
 .navBar p:hover {
     opacity: 0.5;
@@ -213,6 +231,7 @@ nav {
     font-size: 30px;
     font-weight: 700;
     
+    font-family: var(--poppins);
     padding: 0;
     margin: 0;
     padding-inline-start: 60px;
@@ -231,13 +250,21 @@ nav {
 .dropdownmvcorecontent {
     display: none;
 }
+
 .dropdownmvcore p {
+    
     text-align: left;
     font-weight: 700;
     text-align: justify
 }
+.onclick {
+    
+    font-family: var(--poppins);
+}
 .dropdownmvcorecontent p {
     font-weight: 400;
+    
+    font-family: var(--times);
 }
 .aboutContentscol1 li {
     text-decoration: none;
@@ -317,6 +344,8 @@ nav {
     column-gap: 30px;
 }
 .menu h2 {
+    
+    font-family: var(--poppins);
     font-size: 30px;
     font-weight: 700;
     padding-inline-start: 60px;
@@ -332,8 +361,11 @@ nav {
 }
 .menuContentscol1 p {
     text-align: left;
+    
+    font-family: var(--poppins);
 }
 .menuContentscol1 li {
+    
     text-decoration: none;
     list-style: none;
     padding-inline-start: 20px;
@@ -505,6 +537,7 @@ nav {
     display: flex;
     justify-content: space-evenly;
     gap: 100px;
+    overflow: hidden;
 }
 .contact-left {
     display: flex;
@@ -514,6 +547,8 @@ nav {
 }
 .contact-left-title h2 {
     margin-top: 0;
+    
+    font-family: var(--poppins);
     font-weight: 600;
     font-size: 40px;
     margin-bottom: 5px;
@@ -556,6 +591,11 @@ nav {
 .intouch {
     padding: 0px;
     margin: 0;
+    
+}
+.intouch h2 {
+    
+    font-family: var(--poppins);
 }
 .contact-right a {
     all: unset;
@@ -590,9 +630,8 @@ nav {
 
 
 footer {
-    margin-top: 5%;
-    padding-block-start: 20px;
-    height: 100px;
+    padding-top: 5%;
+    height: auto;
     background-color: #a77f56;
     display: flex;
     align-items: center;

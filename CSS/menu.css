@@ -98,8 +98,9 @@ header {
 .hopiacard p {
     font-size: 40px;
     text-align: center;
+    font-family: var(--times);
 }
-.hopiacard .hopiaimg {
+.hopiaimg {
     height: 300px;
     width: 300px;
     z-index: 10;
@@ -216,6 +217,8 @@ header {
 .a3 {
     margin-top: 5%;
     height: auto;
+    
+    margin-bottom: 5%;
 }
 .a3 h2{
     font-size: 40px;
@@ -271,6 +274,7 @@ header {
     text-align: center;
     font-weight: 500;
     font-size: 30px;
+    font-family: var(--times);
 }
 .sauce div :first-child {
     font-size: 16px;
@@ -340,4 +344,131 @@ header {
     50% { transform: rotate(0deg); }
     75% { transform: rotate(10deg); }
     100% { transform: rotate(0deg); }
+}
+
+@media only screen and (max-width: 620px) {
+    .ooze_container {
+        background-repeat: no-repeat;
+    }
+    .row2 {
+        top: 375px;
+    }
+    .a1 h1 {
+        font-size: 10vw;
+    }
+    .a3 {
+        margin-bottom: 5%;
+    }
+    .a3 h2 {
+        font-size: 20px;
+    }
+    #logo {
+        visibility: visible;
+        z-index: 1;
+    }
+    html {
+        overflow-x: hidden;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .hopiacontainer {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        row-gap: 20px;
+        padding: 0;
+    }
+    .hopiacard {
+        height: auto;
+    }
+    .hopiaimg {
+        width: 100px;
+        height: 100px;
+    }
+    .hopiacard p {
+        font-size: 1rem;
+    }
+    .drinkscontainer {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        row-gap: 20px;
+        padding: 0;
+    }
+    .drinkscard {
+        height: 250px;
+        width: 300px;
+    }
+    .sauce img {
+        height: 100px;
+    }
+    .sauce {
+        height: 50px;
+    }
+    .sauce div :first-child {
+        font-size: 10px;
+    }
+    .sauce p {
+        font-size: 1rem;
+    }
+    .moving-header img {
+        height: 100px;
+    }
+    .moving {
+        top: 50px;
+        gap: 35%;
+    }
+    .moving img {
+        height: 70px;
+    }
+    .moving :last-child {
+        height: 70px;
+    }
+    .bottomElement {
+        margin-bottom: -8px;
+        height: 10px;
+    }
+    .title {
+        top: -30px;
+        height: 200px;
+        animation: silly 0.5s ease-out forwards;
+        animation-timeline: view();
+        animation-range: contain;
+        background-color: transparent;
+        animation-fill-mode: both;
+    }
+    .bottomElement {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: -10px;
+        width: 100%;
+        height: 15px;
+        z-index: 2;
+    }
+    .elemtop {
+        top: 0;
+        margin-top: -10px;
+        transform: rotate(180deg);
+    }
+    .elemright {
+        top: 50%;
+        height: 100%;
+        width: 15px;
+        margin-right: -10px;
+        transform: translateY(-50%);
+        right: 0;
+    }
+    .elemleft {
+        top: 50%;
+        height: 100%;
+        width: 15px;
+        margin-left: -10px;
+        transform: translateY(-50%);
+        left: 0;
+    }
+    
+    .b {
+        margin-bottom: -5px;
+        height: 12px;
+    }
 }

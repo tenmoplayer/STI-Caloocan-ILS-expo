@@ -3,6 +3,13 @@ article {
     animation: transitionInonly 0.75s;
     height: 80vh;
 }
+h1 {
+  font-family: var(--merri);
+  font-weight: 600;
+}
+p {
+  font-family: var(--times);
+}
 .a1 {
     margin-top: 40px;
     height: 75vh;
@@ -87,6 +94,7 @@ hr {
 .prize p {
     font-weight: 600;
     font-size: 65px;
+    font-family: var(--merri);
 }
 .normal, .bounce, .wild {
     right: 0;
