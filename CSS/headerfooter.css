@@ -32,6 +32,9 @@ body {
     width: 100vw;
     background: linear-gradient(to bottom, #f5f5dc, #d6b18a);
 }
+h2, h1 {
+    font-family: var(--merri);
+}
 body.active {
     position: fixed;
     width: 100%;

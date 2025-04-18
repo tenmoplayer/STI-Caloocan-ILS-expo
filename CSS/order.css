@@ -123,6 +123,9 @@ hr {
     
     animation: moveMiniSquarecc 4s infinite ease-in-out;
 }
+.a4, .a5{
+  display: none;
+}
 @keyframes moveMiniSquare {
     0% {
       top: 0;
@@ -209,3 +212,91 @@ hr {
       transform: scale(1.2) rotate(-10deg) translate(-3px, -5px);
     }
   }
+
+@media only screen and (max-width: 620px) {
+  .a1 {
+    grid-template-columns: none;
+    grid-template-rows: 150px 1fr;
+    height: auto;
+  }
+  .a1 h1 {
+    font-size: 30px;
+    padding-inline: 0;
+    text-align: center;
+  }
+  .a1 .desktop {
+    min-height: 0px;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .a1 .monitor {
+    height: 300px;
+    width: auto;
+    min-height: 20px;
+  }
+  .a1 .logod {
+    height: 160px;
+    width: auto;
+    min-height: 20px;
+  }
+  .a1 .qr {
+    height: 190px;
+    top: 15px;
+    right: 20px;
+    width: auto;
+    min-height: 20px;
+  }
+  .a1 a {
+    top: 185px;
+    right: 25px;
+  }
+  .prize {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .prize p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .a3 {
+    display: none;
+  }
+  .a4 {
+    height: 30vh;
+    display: block;
+  }
+  .a4 h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+  }
+  .prizegrid {
+    display: flex;
+  }
+  .gift {
+    height: 20px;
+    width: 20px;
+    position: relative;
+  }
+  .gift img {
+    height: 90px;
+  }
+  .bounce {
+    
+    animation: moveMiniSquare 4s infinite ease-in-out;
+  }
+  .a5 {
+    display: block;
+    position: relative;
+  }
+  .a5 img {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+}

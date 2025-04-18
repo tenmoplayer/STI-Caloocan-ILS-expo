@@ -347,11 +347,19 @@ header {
 }
 
 @media only screen and (max-width: 620px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    .moving-header {
+        
+    }
     .ooze_container {
         background-repeat: no-repeat;
     }
     .row2 {
         top: 375px;
+    }
+    .a1 {
     }
     .a1 h1 {
         font-size: 10vw;

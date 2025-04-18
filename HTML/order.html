@@ -45,17 +45,17 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"/></svg>
                 </button>
                 </li>
-                <li><a href="HTML/about.html"><p>ABOUT</p></a></li>
-                <li><a href=""><p>MENU</p></a></li>
-                <li><a href="HTML/contacts.html"><p>CONTACTS</p></a></li>
-                <li><a href=""><p>ORDER NOW</p></a></li>
+                <li><a href="about.html"><p>ABOUT</p></a></li>
+                <li><a href="menu.html"><p>MENU</p></a></li>
+                <li><a href="contacts.html"><p>CONTACTS</p></a></li>
+                <li><a href="order.html"><p>ORDER NOW</p></a></li>
             </ul>
         </nav>
         <div id="overlay" onclick="closeSidebar()">
         </div>
         <ul class="navBarmobile">
-            <li>MENU</li>
-            <li> <img class="logo" id="logo" src="../IMAGES/logo.png"> </li>
+            <li onclick="menu()">MENU</li>
+            <li onclick="home()"> <img class="logo" id="logo" src="../IMAGES/logo.png"> </li>
             <li> 
                 <button id="open-sidebar-button" onclick="openSidebar()">
                     <img src="../IMAGES/hamburger.png" style="height: 20px;" alt="">
@@ -78,7 +78,7 @@
     <article class="a3">
         <div class="a3Container">
             <div class="prizegrid">
-                <h1 style="font-weight: 700; font-size: 50px; text-align: center;">Raffle Prize Promo</h1>
+                <h1 style="font-weight: 700; font-size: 4rem; text-align: center;">Raffle Prize Promo</h1>
                 <div class="prize">
                     <p>Prize #1</p>
                     <div style=" height: 100%; width: 200px; position: relative;">
@@ -91,20 +91,20 @@
                     <div style=" height: 100%; width: 200px; position: relative;">
                         
                         <img class="bounce" src="../IMAGES/gift.png" alt="">
-                        </div>
+                    </div>
                 </div>
                 <div class="prize">
                     <p>Prize #3</p>
                     <div style=" height: 100%; width: 200px; position: relative;">
                         
                         <img class="wild" src="../IMAGES/gift.png" alt="">
-                        </div>
+                    </div>
                 </div>
             </div>
             <div class="textna" style="position: relative;">
                 <div class="textcontainer">
                     <h1 style="text-align: center; font-weight: 700; font-size: 30px;">How can I sign up for our raffle prize promotion?</h1>
-                    <p style="text-align: center; font-size: 30px;">
+                    <p style="text-align: center; font-size: 1.8rem;">
                         First, take a screenshot of you following us on our social media accounts (Facebook and Instagram).
                         <br>
                         <br>
@@ -119,5 +119,53 @@
             </div>
         </div>
     </article>
+    <article class="a4">
+        <h1>Raffle Prize Promo</h1>
+        <div class="prizegrid">
+            <div class="prize">
+                <p>Prize #1</p>
+                <div class="gift">
+                    
+                <img class="normal" src="../IMAGES/gift.png" alt="">
+                </div>
+            </div>
+            <div class="prize">
+                <p>Prize #2</p>
+                <div class="gift">
+                    
+                    <img class="bounce" src="../IMAGES/gift.png" alt="">
+                </div>
+            </div>
+            <div class="prize">
+                <p>Prize #3</p>
+                <div class="gift">
+                    
+                    <img class="wild" src="../IMAGES/gift.png" alt="">
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="a5">
+        <img src="../IMAGES/scroll.png" alt="">
+        <h1 style="text-align: center; font-weight: 700; font-size: 20px; margin-top: 10%; padding-inline: 13%;">How can I sign up for our raffle prize promotion?</h1>
+        <p style="text-align: center; font-size: 1.1rem; z-index: 2; padding-inline: 13%;">
+            First, take a screenshot of you following us on our social media accounts (Facebook and Instagram).
+            <br>
+            <br>
+            Second, buy eight pieces of our delicious Fruitopia bundle with your preferred dip and hot or cold coffee and snap a photo at our booth.
+            <br>
+            <br>
+            Finally, send the screenshot and the captured photo to our Facebook page as proof that you meet the conditions needed to be included in our promotion. 
+            <br>
+            <br>
+            Please note that this promotion will end on the last day of Expo and Entrep Week. Each participant can only participate once.</p>
+    </article>
+    <footer>
+        <div class="footer-icon">
+            <img src="../IMAGES/fbbrown.jpg" alt="">
+            <img src="../IMAGES/igbrown.jpg" alt="">
+        </div>
+        <p>Fruitopia Food Corp.</p>
+    </footer>
 </body>
 </html>

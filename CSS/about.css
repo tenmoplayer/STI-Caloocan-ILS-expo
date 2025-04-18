@@ -173,7 +173,6 @@ article {
 
 
     .headerfoot {
-        display: none;
     }
     .a2 {
         display: flex;
@@ -189,5 +188,13 @@ article {
     }
     .h2p p {
         font-size: 1.6rem;
+    }
+    .corevaluesfooter {
+        height: 20px;
+        bottom: -20px;
+    }
+    .corevaluesheader {
+        height: 20px;
+        top: -20px;
     }
 }

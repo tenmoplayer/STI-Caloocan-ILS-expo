@@ -20,3 +20,11 @@ function openSidebar(){
 function closeSidebar(){
   navbar.classList.remove('show')
 }
+function menu() {
+  // Change this to your target HTML file
+  window.location.href = "../HTML/menu.html";
+}
+function home() {
+  // Change this to your target HTML file
+  window.location.href = "../index.html";
+}

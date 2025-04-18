@@ -23,7 +23,7 @@
                 <li class="navButtons" id="menu">
                     <a href="menu.html"><p>MENU</p></a>
                 </li>
-                <li class="navButtons" id="logobg" style="background-image: url(../IMAGES/aboutfixed.png); background-size: contain; background-repeat: no-repeat; background-position: center;"> <img class="logo" id="logo" src="../IMAGES/aboutfixed.png"> </li>
+                <li onclick="home()" class="navButtons" id="logobg" style="background-image: url(../IMAGES/aboutfixed.png); background-size: contain; background-repeat: no-repeat; background-position: center;"> <img class="logo" id="logo" src="../IMAGES/aboutfixed.png"> </li>
                 <li class="navButtons" id="contact">
                     <a href="contacts.html"><p>CONTACTS</p></a>
                 </li>
@@ -42,14 +42,14 @@
                 <li><a href="about.html"><p>ABOUT</p></a></li>
                 <li><a href="menu.html"><p>MENU</p></a></li>
                 <li><a href="contacts.html"><p>CONTACTS</p></a></li>
-                <li><a href=""><p>ORDER NOW</p></a></li>
+                <li><a href="order.html"><p>ORDER NOW</p></a></li>
             </ul>
         </nav>
         <div id="overlay" onclick="closeSidebar()">
         </div>
         <ul class="navBarmobile">
-            <li>MENU</li>
-            <li> <img class="logo" id="logo" src="../IMAGES/logo.png"> </li>
+            <li onclick="menu()">MENU</li>
+            <li onclick="home()"> <img class="logo" id="logo" src="../IMAGES/logo.png"> </li>
             <li> 
                 <button id="open-sidebar-button" onclick="openSidebar()">
                     <img src="../IMAGES/hamburger.png" style="height: 20px;" alt="">
@@ -91,7 +91,6 @@
         <div class="coreValuesmainContainer">
             <div class="headerfoot">
                 <div class="corevaluesheader"></div>
-                <div class="corevaluesfooter"></div>
             </div>
             
             <div class="corevalues">
@@ -128,7 +127,6 @@
         </div>
         <div class="coreValuesmainContainer below">
             <div class="headerfoot">
-                <div class="corevaluesheader"></div>
                 <div class="corevaluesfooter"></div>
             </div>
             <div class="corevalues">
