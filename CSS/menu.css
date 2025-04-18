@@ -95,16 +95,197 @@ header {
     position: relative;
 }
 
-.hopiacard p {
+.hopiacard > p {
     font-size: 40px;
+    margin-bottom: 0;
     text-align: center;
     font-family: var(--times);
+}
+p.rate {
+    font-size: 20px;
+    margin-top: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: var(--poppins);
+}
+#mangorate {
+    background-color: #f0dc0096;;
+}
+#strawrate {
+    background-color: #ff007b85;
+}
+#applerate {
+    background-color: #fe39397c;
+}
+#pandanrate {
+    background-color: #37ff298a;
+}
+p.rate:hover{
+    cursor: pointer;
+    opacity: 0.5;
 }
 .hopiaimg {
     height: 300px;
     width: 300px;
     z-index: 10;
 }
+
+  
+  /* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: auto;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    
+    background-color: #f8f4dc;
+    background-image: url(CSSBG/droop.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    border-radius: 16px;
+    padding: 30px 25px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.3s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Close Button */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .close:hover {
+    color: #000;
+  }
+  
+  /* Form Structure */
+
+  
+  form h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: var(--merri);
+    font-weight: 900;
+  }
+.star-rating {
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  
+  .star-rating label {
+    font-size: 3rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .star-rating label::before {
+    content: "★";
+  }
+  
+  .star-rating input[type="radio"]:checked ~ label::before,
+  .star-rating label:hover ~ label::before,
+  .star-rating label:hover::before {
+    color: #f0dc00;
+  }
+  
+  .rating-submit {
+    background-color: #f0dc00;
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px;
+    transition: background-color 0.3s;
+  }
+  
+  .rating-submit:hover {
+    background-color: #e0c800;
+  }
+  
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 620px) {
+    .modal-content {
+      padding: 20px 15px;
+      width: 90%;
+    }
+  
+    form h2 {
+      font-size: 18px;
+    }
+  
+    form label {
+      font-size: 14px;
+    }
+  
+    form button {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .close {
+      font-size: 20px;
+    }
+  }
+  
+  
+
+
+
+
+
+
+
 #apple {
     filter: drop-shadow(5px 5px 30px #fe3939);
 }
@@ -481,5 +662,8 @@ header {
     .b {
         margin-bottom: -5px;
         height: 12px;
+    }
+    p.rate {
+        font-size: 10px;
     }
 }

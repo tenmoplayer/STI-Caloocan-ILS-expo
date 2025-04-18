@@ -10,6 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
     <script src="../JS/navbar.js" defer></script>
+    <script src="../JS/rate.js" defer></script>
     <title>Menu</title>
 </head>
 <body>
@@ -82,6 +83,7 @@
                 <p>
                     Mango filling that is tropical and smooth, with a touch of zesty flavor and a balance of sweetness.
                 </p>
+                <p class="rate" id="mangorate">Rate this product!</p>
                 <img class="bottomElement b" src="../IMAGES/hopiaproductelement.png" alt="">
             </div>
             <div class="hopiacard">
@@ -94,6 +96,7 @@
                 <p>
                     Strawberry delight with sweet and juicy goodness, ideal for a fruity burst with each bite.
                 </p>
+                <p class="rate" id="strawrate">Rate this product!</p>
                 <img class="bottomElement b" src="../IMAGES/hopiaproductelement.png" alt="">
             </div>
             <div class="hopiacard">
@@ -106,6 +109,7 @@
                 <p>
                     A classic and cozy apple filling with a blend of sweetness and cinnamon.
                 </p>
+                <p class="rate" id="applerate">Rate this product!</p>
                 <img class="bottomElement b" src="../IMAGES/hopiaproductelement.png" alt="">
             </div>
             <div class="hopiacard">
@@ -118,6 +122,7 @@
                 <p>
                     Rich and reviving  creamy combination of young coconut and pandan flavor.
                 </p>
+                <p class="rate" id="pandanrate">Rate this product!</p>
                 <img class="bottomElement b" src="../IMAGES/hopiaproductelement.png" alt="">
             </div>
         </div>
@@ -185,5 +190,121 @@
         </div>
         <p>Fruitopia Food Corp.</p>
     </footer>
+    <div class="modal" id="modal-mango">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="rating-form" action="https://api.web3forms.com/submit" method="POST">
+                <h2>Rate Silly Mango!</h2>
+                <div class="star-rating">
+                    
+                    <input type="hidden" name="access_key" value="772f5a1d-75ea-45ea-84c4-77a376136af1">
+                    <input type="radio" id="star5" name="A user rated Silly Mango with" value="5 star rating" />
+                    <label for="star5" title="5 stars"></label>
+                  
+                    <input type="radio" id="star4" name="A user rated Silly Mango with" value="4 star rating" />
+                    <label for="star4" title="4 stars"></label>
+                  
+                    <input type="radio" id="star3" name="A user rated Silly Mango with" value="3 star rating" />
+                    <label for="star3" title="3 stars"></label>
+                  
+                    <input type="radio" id="star2" name="A user rated Silly Mango with" value="2 star rating" />
+                    <label for="star2" title="2 stars"></label>
+                  
+                    <input type="radio" id="star1" name="A user rated Silly Mango with" value="1 star rating" />
+                    <label for="star1" title="1 star"></label>
+                  </div>
+                  
+                  <button type="submit" class="rating-submit">Submit Rating</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="modal-straw">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="rating-form" action="https://api.web3forms.com/submit" method="POST">
+                <h2>Rate Berry Lovely!</h2>
+                <div class="star-rating">
+                    
+                    <input type="hidden" name="access_key" value="772f5a1d-75ea-45ea-84c4-77a376136af1">
+                    <input type="radio" id="star5" name="A user rated Rate Berry Lovely with" value="5 star rating" />
+                    <label for="star5" title="5 stars"></label>
+                  
+                    <input type="radio" id="star4" name="A user rated Berry Lovely with" value="4 star rating" />
+                    <label for="star4" title="4 stars"></label>
+                  
+                    <input type="radio" id="star3" name="A user rated Berry Lovely with" value="3 star rating" />
+                    <label for="star3" title="3 stars"></label>
+                  
+                    <input type="radio" id="star2" name="A user rated Berry Lovely with" value="2 star rating" />
+                    <label for="star2" title="2 stars"></label>
+                  
+                    <input type="radio" id="star1" name="A user rated Berry Lovely with" value="1 star rating" />
+                    <label for="star1" title="1 star"></label>
+                  </div>
+                  
+                  <button type="submit" class="rating-submit">Submit Rating</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="modal-apple">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="rating-form" action="https://api.web3forms.com/submit" method="POST">
+                <h2>Rate Blissful Apple!</h2>
+                <div class="star-rating">
+                    
+                    <input type="hidden" name="access_key" value="772f5a1d-75ea-45ea-84c4-77a376136af1">
+                    <input type="radio" id="star5" name="A user rated Blissful Apple with" value="5 star rating" />
+                    <label for="star5" title="5 stars"></label>
+                  
+                    <input type="radio" id="star4" name="A user rated Blissful Apple with" value="4 star rating" />
+                    <label for="star4" title="4 stars"></label>
+                  
+                    <input type="radio" id="star3" name="A user rated Blissful Apple with" value="3 star rating" />
+                    <label for="star3" title="3 stars"></label>
+                  
+                    <input type="radio" id="star2" name="A user rated Blissful Apple with" value="2 star rating" />
+                    <label for="star2" title="2 stars"></label>
+                  
+                    <input type="radio" id="star1" name="A user rated Blissful Apple with" value="1 star rating" />
+                    <label for="star1" title="1 star"></label>
+                  </div>
+                  
+                  <button type="submit" class="rating-submit">Submit Rating</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="modal-pandan">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="rating-form" action="https://api.web3forms.com/submit" method="POST">
+                <h2>Rate Buco Loco!</h2>
+                <div class="star-rating">
+                    
+                    <input type="hidden" name="access_key" value="772f5a1d-75ea-45ea-84c4-77a376136af1">
+                    <input type="radio" id="star5" name="A user rated Buco Loco with" value="5 star rating" />
+                    <label for="star5" title="5 stars"></label>
+                  
+                    <input type="radio" id="star4" name="A user rated Buco Loco with" value="4 star rating" />
+                    <label for="star4" title="4 stars"></label>
+                  
+                    <input type="radio" id="star3" name="A user rated Buco Loco with" value="3 star rating" />
+                    <label for="star3" title="3 stars"></label>
+                  
+                    <input type="radio" id="star2" name="A user rated Buco Loco with" value="2 star rating" />
+                    <label for="star2" title="2 stars"></label>
+                  
+                    <input type="radio" id="star1" name="A user rated Buco Loco with" value="1 star rating" />
+                    <label for="star1" title="1 star"></label>
+                  </div>
+                  
+                  <button type="submit" class="rating-submit">Submit Rating</button>
+            </form>
+        </div>
+    </div>
+    
+    
+    
+    
 </body>
 </html>
