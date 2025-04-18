@@ -11,10 +11,9 @@ const sections = {
 
 let activeButton = null;
 const originalImage = "/IMAGES/logo.png";
-const transitionDuration = 800; // Smooth transition time
+const transitionDuration = 800; 
 let isTransitioning = false;
 
-// Function to show element with fade-in effect
 function showWithFade(element) {
     element.style.display = "flex";
     element.style.opacity = "0";
@@ -24,7 +23,6 @@ function showWithFade(element) {
     }, 50);
 }
 
-// Function to hide element with fade-out effect
 function hideWithFade(element) {
     element.style.opacity = "0";
     element.style.visibility = "hidden";
@@ -33,7 +31,6 @@ function hideWithFade(element) {
     }, transitionDuration);
 }
 
-// Apply default styles for fade effect
 Object.values(sections).forEach(element => {
     element.style.opacity = "0";
     element.style.visibility = "hidden";
@@ -43,19 +40,17 @@ Object.values(sections).forEach(element => {
 
 buttons.forEach(button => {
     button.addEventListener("click", (event) => {
-        if (isTransitioning) return; // Prevent fast spam-clicks
+        if (isTransitioning) return; 
 
         const buttonText = event.currentTarget.textContent.trim().toUpperCase();
         logo.src = originalImage;
 
         if (activeButton === event.currentTarget) {
-            // Close all sections if the same button is clicked again
             slate.classList.remove("active");
             body.classList.remove("active");
             Object.values(sections).forEach(hideWithFade);
             activeButton = null;
         } else {
-            // Open selected section and close others
             slate.classList.add("active");
             body.classList.add("active");
             Object.entries(sections).forEach(([key, element]) => {
@@ -68,7 +63,6 @@ buttons.forEach(button => {
             activeButton = event.currentTarget;
         }
 
-        // Allow new clicks after a small delay (prevents spam-click issues)
         isTransitioning = true;
         setTimeout(() => {
             isTransitioning = false;
@@ -76,7 +70,6 @@ buttons.forEach(button => {
     });
 });
 
-// Change logo based on button clicked
 buttons.forEach(button => {
     button.addEventListener("click", (event) => {
         const buttonText = event.currentTarget.textContent.trim().toUpperCase();
@@ -109,21 +102,18 @@ dropdowns.forEach(dropdown => {
     const dropdownContent = dropdown.querySelector('.dropdowncontent');
     const parentContainer = document.querySelector('.menuContentscol1');
 
-    // Initialize plus sign
     toggleText.innerHTML = `+ ${toggleText.textContent}`;
 
     toggleText.addEventListener('click', () => {
         const isContentVisible = dropdownContent.style.display === 'block';
 
-        // Toggle visibility
         dropdownContent.style.display = isContentVisible ? 'none' : 'block';
 
-        // Update symbol
         toggleText.innerHTML = isContentVisible 
             ? `+ ${toggleText.textContent.slice(2)}` 
             : `− ${toggleText.textContent.slice(2)}`;
 
-        // Adjust the parent container height
+
         parentContainer.style.height = isContentVisible ? 'auto' : parentContainer.scrollHeight + 'px';
     });
 });
@@ -136,7 +126,7 @@ window.addEventListener('click', (e) => {
 
         if (!dropdown.contains(e.target)) {
             dropdownContent.style.display = 'none';
-            toggleText.innerHTML = `+ ${toggleText.textContent.slice(2)}`; // Reset to plus
+            toggleText.innerHTML = `+ ${toggleText.textContent.slice(2)}`; 
             parentContainer.style.height = 'auto';
         }
     });
@@ -153,15 +143,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollCore = document.querySelector(".scrollCore");
     const listItems = document.querySelectorAll(".onclick");
 
-    // Hide core values initially
+
     scrollCore.style.display = "none";
 
     listItems.forEach((item, index) => {
         item.addEventListener("click", function () {
-            if (index === 0) { // Mission & Vision
+            if (index === 0) { 
                 fadeToggle(missionVisionTab, true);
                 fadeToggle(scrollCore, false);
-            } else if (index === 1) { // Core Values
+            } else if (index === 1) { 
                 fadeToggle(missionVisionTab, false);
                 fadeToggle(scrollCore, true);
             }
@@ -195,21 +185,17 @@ dropdownsmv.forEach(dropdown => {
     const dropdownContent = dropdown.querySelector('.dropdownmvcorecontent');
     const parentContainer = document.querySelector('.aboutContentscol1');
 
-    // Initialize plus sign
     toggleText.innerHTML = `+ ${toggleText.textContent}`;
 
     toggleText.addEventListener('click', () => {
         const isContentVisible = dropdownContent.style.display === 'block';
 
-        // Toggle visibility
         dropdownContent.style.display = isContentVisible ? 'none' : 'block';
 
-        // Update symbol
         toggleText.innerHTML = isContentVisible 
             ? `+ ${toggleText.textContent.slice(2)}` 
             : `− ${toggleText.textContent.slice(2)}`;
 
-        // Adjust the parent container height
         parentContainer.style.height = isContentVisible ? 'auto' : parentContainer.scrollHeight + 'px';
     });
 });
@@ -222,12 +208,11 @@ window.addEventListener('click', (e) => {
 
         if (!dropdown.contains(e.target)) {
             dropdownContent.style.display = 'none';
-            toggleText.innerHTML = `+ ${toggleText.textContent.slice(2)}`; // Reset to plus
+            toggleText.innerHTML = `+ ${toggleText.textContent.slice(2)}`;
             parentContainer.style.height = 'auto';
         }
     });
 });
 function order() {
-    // Change this to your target HTML file
     window.location.href = "../HTML/order.html";
   }
