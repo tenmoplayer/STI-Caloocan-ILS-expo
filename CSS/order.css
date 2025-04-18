@@ -212,7 +212,9 @@ hr {
       transform: scale(1.2) rotate(-10deg) translate(-3px, -5px);
     }
   }
-
+.a5 p {
+  text-align: center; font-size: 4vw; z-index: 2; padding-inline: 13%;
+}
 @media only screen and (max-width: 620px) {
   .a1 {
     grid-template-columns: none;
@@ -298,5 +300,8 @@ hr {
     position: absolute;
     width: 100%;
     z-index: -1;
+  }
+  .a5 p {
+    font-size: 3.8vw;
   }
 }

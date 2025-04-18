@@ -360,6 +360,7 @@ header {
         top: 375px;
     }
     .a1 {
+        overflow-x: hidden;
     }
     .a1 h1 {
         font-size: 10vw;
@@ -423,6 +424,8 @@ header {
         height: 100px;
     }
     .moving {
+        width: 100%;
+        overflow-x: hidden;
         top: 50px;
         gap: 35%;
     }
