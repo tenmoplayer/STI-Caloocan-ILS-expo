@@ -180,14 +180,22 @@ article {
         align-items: center;
 
     }
+    .corevalues {
+        width: 250px;
+        max-width: 250px;
+    }
     .coreValuesmainContainer {
         width: 100%;
         display: flex;
         justify-content: center;
         gap: 10px;
     }
+    .h2p h2 {
+
+    }
     .h2p p {
         font-size: 1.6rem;
+        padding-inline: 15px;
     }
     .corevaluesfooter {
         height: 20px;
@@ -196,5 +204,11 @@ article {
     .corevaluesheader {
         height: 20px;
         top: -20px;
+    }
+    .long p {
+        font-size: 1.4rem;
+    }
+    .h2p {
+        height: 65%;
     }
 }
