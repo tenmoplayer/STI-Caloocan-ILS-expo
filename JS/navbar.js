@@ -18,5 +18,5 @@ function ig() {
   window.location.href = "https://www.instagram.com/fruitopia.food_corporation/?utm_source=ig_web_button_share_sheet";
 }
 function fb() {
-  window.location.href = "https://www.facebook.com/profile.php?id=61573540895348";
+  window.location.href = "https://www.facebook.com/share/p/157gf44niS/";
 }
