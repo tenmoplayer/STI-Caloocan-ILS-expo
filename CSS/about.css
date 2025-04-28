@@ -193,7 +193,7 @@ article {
 
     }
     .h2p p {
-        font-size: 1.5rem;
+        font-size: 4vw;
         padding-inline: 15px;
     }
     .corevaluesfooter {
@@ -205,7 +205,7 @@ article {
         top: -20px;
     }
     .long p {
-        font-size: 1.3rem;
+        font-size: 4vw;
     }
     .h2p {
         height: 65%;
